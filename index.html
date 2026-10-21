@@ -224,8 +224,9 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
     document.querySelectorAll('.lbl[data-s]').forEach(function(l){
       var k = l.getAttribute('data-s'), sp = r.spheres.filter(function(x){return x.s.id===k})[0];
       var title = {task:'Экспресс-прогноз', money:'Финансы', career:'Карьера', love:'Отношения', health:'Здоровье'}[k];
-      if(k === 'task'){ l.innerHTML = '<small>✦ Главное · экспресс-прогноз</small><b>' + TEASE[k] + '</b><i>Открыть мою задачу →</i>'; return; }
-      l.innerHTML = '<small>' + title + '</small>' + TEASE[k] + ' →';
+      if(k === 'task'){ l.innerHTML = '<small>✦ Главное · экспресс-прогноз</small><b>' + TEASE[k] + '</b><i>Открыть мою задачу ↓</i>'; return; }
+      var onLeft = l.parentNode.classList.contains('left');
+      l.innerHTML = '<small>' + title + '</small>' + (onLeft ? TEASE[k] + ' →' : '← ' + TEASE[k]);
     });
     var road = document.getElementById('road'); road.hidden = false;
     document.querySelectorAll('.lbl').forEach(function(l){ l.classList.add('on'); });
