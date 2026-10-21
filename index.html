@@ -22,17 +22,19 @@ h1{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;co
 .form input:focus{outline:none;border-color:var(--wine)}
 .btn{display:block;width:100%;border:0;border-radius:14px;padding:16px;font:700 16px Manrope,sans-serif;color:#fff;background:linear-gradient(180deg,var(--wine2),var(--wine));box-shadow:0 10px 26px rgba(125,29,51,.3);cursor:pointer}
 .note{font-size:12px;color:var(--mut);text-align:center;margin-top:10px}
-.road{position:relative;margin:26px -16px 0;aspect-ratio:941/1672;background:url(img/doroga.jpg) center/cover}
+.road[hidden]{display:none}
+.road{position:relative;margin-top:84px!important;animation:rise .9s ease both;margin:26px -16px 0;aspect-ratio:941/1672;background:url(img/doroga.jpg) center/cover}
 .road:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--bg) 0,transparent 10%,transparent 90%,var(--bg) 100%)}
 .ms{position:absolute;transform:translate(-23px,-50%);display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--txt);z-index:2}
 .ms.left{flex-direction:row-reverse;transform:translate(calc(-100% + 23px),-50%)}
 .ms.big{transform:translate(-45px,-50%)}
 .dot{width:46px;height:46px;border-radius:50%;flex:none;border:2px solid var(--wine);box-shadow:0 0 0 5px rgba(255,255,255,.55);animation:pulse 2.6s ease-in-out infinite}
-.lbl{background:rgba(255,255,255,.92);border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700;color:var(--wine);white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.08)}
-.lbl small{display:block;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt);font-weight:600}
+.lbl{width:max-content;max-width:215px;white-space:normal!important;line-height:1.25;background:rgba(255,255,255,.92);border:1px solid var(--line);padding:6px 12px;border-radius:999px;font-size:13px;font-weight:700;color:var(--wine);white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.08)}
+.lbl small{display:block;white-space:nowrap;font-size:9px!important;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--txt);font-weight:600}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
 @keyframes pulse{50%{box-shadow:0 0 0 10px rgba(255,255,255,.25)}}
 .author{display:flex;gap:12px;align-items:center;text-align:left;background:#fff;border:1px solid var(--line);border-radius:18px;padding:10px;margin-top:18px}
-.author img{width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:50% 20%;border:2px solid var(--gold)}
+.author img{flex:none;width:64px;height:64px;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:50% 20%;border:2px solid var(--gold)}
 .author p{font-size:13px;color:var(--mut);line-height:1.4}.author b{display:block;color:var(--wine);font-size:15px}
 #res{padding-bottom:40px}
 .res-head{text-align:center;margin:10px 0 18px}
@@ -54,7 +56,14 @@ h4{font-size:15px;color:var(--wine);margin:16px 0 6px}
 .offer img{width:100%;height:300px;object-fit:cover;object-position:50% 30%;border-radius:16px;margin:0 0 14px}
 .prod{border:1px solid var(--line);border-radius:16px;padding:14px;margin:12px 0}.prod .btn{text-align:center;text-decoration:none;margin-top:8px}
 .gift{text-align:center;font-weight:700;color:var(--wine);margin-top:10px}
-.road-cap{position:absolute;left:0;right:0;top:3%;text-align:center;z-index:2;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:22px;color:var(--wine)}
+.ill{width:calc(100% + 36px);margin:-20px -18px 14px;height:210px;object-fit:cover;border-radius:20px 20px 0 0;display:block}
+.pain{font-family:Montserrat,sans-serif;font-weight:800;color:var(--txt);font-size:16px;line-height:1.35;border-left:3px solid var(--wine);padding-left:12px}
+details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
+.alt{display:block;text-align:center;margin-top:10px;color:var(--wine);font-size:14px}
+.btn.ghost{background:#fff;color:var(--wine);border:1.5px solid var(--wine);box-shadow:none;margin-top:10px}
+.offer .btn{text-align:center;text-decoration:none;margin-top:10px}
+.road-cap small{display:block;font:600 12px Manrope,sans-serif;letter-spacing:.14em;color:var(--txt);text-transform:uppercase;margin-top:4px}
+.road-cap{position:absolute;left:0;right:0;top:3%;text-align:center;z-index:2;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:22px;color:var(--wine);top:-70px!important}
 </style>
 </head>
 <body>
@@ -68,22 +77,20 @@ h4{font-size:15px;color:var(--wine);margin:16px 0 6px}
   </header>
 
   <form class="form" id="f" onsubmit="return false">
-    <label for="name">Ваше имя</label>
-    <input id="name" placeholder="Например, Анна" autocomplete="given-name">
     <label for="bd">Дата рождения</label>
     <input id="bd" type="date" min="1940-01-01" max="2012-12-31">
-    <button class="btn" type="submit">Рассчитать мою задачу 2027</button>
+    <button class="btn" type="submit">Открыть мою дорогу 2027</button>
     <p class="note">Бесплатно. Результат по вашей дате, а не общий текст по знаку</p>
   </form>
 </div>
 
-<div class="road" id="road">
-  <div class="road-cap">Ваша дорога 2027</div>
-  <a class="ms left" href="#s-health" style="left:76.6%;top:12.6%"><span class="dot"></span><span class="lbl"><small>Веха 5</small>Здоровье</span></a>
-  <a class="ms" href="#s-love" style="left:51.2%;top:23.6%"><span class="dot"></span><span class="lbl"><small>Веха 4</small>Отношения</span></a>
-  <a class="ms left" href="#s-career" style="left:63.2%;top:35.9%"><span class="dot"></span><span class="lbl"><small>Веха 3</small>Карьера</span></a>
-  <a class="ms" href="#s-money" style="left:50.0%;top:54.2%"><span class="dot"></span><span class="lbl"><small>Веха 2</small>Финансы</span></a>
-  <a class="ms big" href="#s-task" style="left:47.2%;top:82.8%"><span class="dot" style="width:90px;height:90px"></span><span class="lbl"><small>Веха 1</small>Кармическая задача года</span></a>
+<div class="road" id="road" hidden>
+  <div class="road-cap">Ваша дорога 2027<small>нажмите на жемчужину</small></div>
+  <a class="ms left" href="#s-health" style="left:76.6%;top:12.6%"><span class="dot"></span><span class="lbl" data-s="health"><small>Веха 5</small>Здоровье</span></a>
+  <a class="ms" href="#s-love" style="left:51.2%;top:23.6%"><span class="dot"></span><span class="lbl" data-s="love"><small>Веха 4</small>Отношения</span></a>
+  <a class="ms left" href="#s-career" style="left:63.2%;top:35.9%"><span class="dot"></span><span class="lbl" data-s="career"><small>Веха 3</small>Карьера</span></a>
+  <a class="ms" href="#s-money" style="left:50.0%;top:54.2%"><span class="dot"></span><span class="lbl" data-s="money"><small>Веха 2</small>Финансы</span></a>
+  <a class="ms big" href="#s-task" style="left:47.2%;top:82.8%"><span class="dot" style="width:90px;height:90px"></span><span class="lbl" data-s="task"><small>Веха 1</small>Кармическая задача года</span></a>
 </div>
 
 <div class="wrap" id="res" hidden></div>
@@ -121,11 +128,22 @@ h4{font-size:15px;color:var(--wine);margin:16px 0 6px}
     if(id === 'money'){ var m = ART.money; return '<div class="paid"><h4>' + m.h + '</h4>' + m.p.map(function(t){return '<p>' + t + '</p>'}).join('') + '<a class="btn" href="' + LANDING.money + '" target="_blank" onclick="return window.__g(\'money\')">' + m.btn + '</a></div>'; }
     return '<div class="paid"><h4>Как я смотрю это в прогнозе</h4><p>' + ART[id] + '</p>' + ART.year.map(function(t){return '<p>' + t + '</p>'}).join('') + '<a class="btn" href="' + LANDING.year + '" target="_blank" onclick="return window.__g(\'year\')">Как проходит прогноз на 2027 год</a></div>';
   }
+  var COPY = {
+    money:{img:'dengi', title:'Как в 2027 году выйти на новый уровень в деньгах', pain:'«То пусто, то густо». Работы всё больше, а доход стоит на месте, и непонятно, куда двигаться дальше',
+      sol:'Новый уровень в деньгах начинается с двух вещей: через что вам по карте проще зарабатывать и в какие месяцы 2027 года действовать. Деньги я разбираю и в годовом прогнозе, вместе со всеми сферами. А если вам нужны именно деньги, глубоко и подробно, для этого мой разбор «Мой денежный год 2027»: ваша денежная модель, денежные месяцы и денежные дни, когда продавать, подписывать и поднимать цену',
+      btn:'Хочу свой денежный год 2027', alt:'или прогноз на 2027 год по всем сферам'},
+    career:{img:'kariera', title:'Как в 2027 году найти своё дело и выйти на новую роль', pain:'«Надоела работа, не понимаю, куда двигаться». Хочется уволиться или начать своё, но страшно ошибиться с моментом',
+      sol:'Уволиться, запуститься, попросить повышение: всё упирается в один вопрос, когда. В прогнозе на 2027 год я показываю, в какие месяцы карьера открывает двери, когда лучше закрепиться на месте и что делать в каждый период', btn:'Хочу прогноз на 2027 год'},
+    love:{img:'otnosheniya', title:'Как в 2027 году встретить своего человека или вывести пару на новый уровень', pain:'«Удастся ли построить отношения в следующем году?» Или пара есть, но одни и те же ссоры идут по кругу',
+      sol:'В прогнозе на 2027 год я показываю, когда год открывает знакомства, когда проверяет пару на прочность и как пройти эти периоды без потерь', btn:'Хочу прогноз на 2027 год'},
+    health:{img:'zdorovie', title:'Как в 2027 году сохранить силы и не выгореть', pain:'Со стороны всё пристойно, а внутри усталость, которую не снимает даже отпуск',
+      sol:'В прогнозе на 2027 год я показываю, в какие периоды беречь силы и не брать лишнего, и подбираю простые действия, которые снижают напряжение. Карта не заменяет врача, но подсказывает, когда прислушаться к себе внимательнее', btn:'Хочу прогноз на 2027 год'}
+  };
   var LABEL = {focus:'Кармический поворот', release:'Отпустить старое', exam:'Экзамен Сатурна', calm:'Спокойная зона'};
   function esc(s){ return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]}) }
 
   document.getElementById('f').addEventListener('submit', function(){
-    var v = document.getElementById('bd').value, name = esc(document.getElementById('name').value.trim() || '');
+    var v = document.getElementById('bd').value, name = '';
     if(!v){ document.getElementById('bd').focus(); return; }
     var p = v.split('-').map(Number);
     var r = K.calc(p[0], p[1], p[2]);
@@ -133,33 +151,39 @@ h4{font-size:15px;color:var(--wine);margin:16px 0 6px}
     var hi = name ? name + ', ' : '';
     var h = '';
     h += '<section class="res-head"><div class="kick">Ваш расчёт</div><h2>' + (name ? name + ', ваша' : 'Ваша') + ' кармическая задача 2027</h2><p class="meta">Солнце ' + K.SIGNS_IN[r.sun] + ' · Северный узел ' + K.SIGNS_IN[r.nn] + ' · Сатурн ' + K.SIGNS_IN[r.sat] + '</p></section>';
-    h += '<section class="card" id="s-task"><div class="tag">Веха 1</div><h3>Кармическая задача года</h3>';
+    h += '<section class="card" id="s-task"><img class="ill" src="img/sfera-zadacha.jpg" alt=""><div class="tag">Веха 1</div><h3>Кармическая задача года</h3>';
     r.flags.forEach(function(f){ h += '<p class="flag">✦ ' + K.FLAG[f] + '</p>'; });
-    h += '<h4>Задача вашей жизни</h4><p>' + L.text + '</p><p class="pair"><span>Куда расти</span>' + L.grow + '</p><p class="pair"><span>Что отпустить</span>' + L.drop + '</p>';
-    h += '<h4>Что приносит именно 2027 год</h4><p>' + K.YEAR[r.hNN] + '</p>';
-    h += '<h4>Где 2027 потребует взрослости</h4><p>' + K.SAT[r.hSat] + '</p>';
-    h += '<p class="hint">Общая задача у вас есть. Но в какие месяцы она обострится и как прожить каждый период, видно только в полной карте с временем рождения</p></section>';
+    h += '<p class="pair"><span>Куда расти</span>' + L.grow + '</p><p class="pair"><span>Что отпустить</span>' + L.drop + '</p>';
+    h += '<p>' + K.YEAR[r.hNN] + '</p>';
+    h += '<p class="pair"><span>Где 2027 потребует взрослости</span>' + K.SAT[r.hSat] + '</p>';
+    h += '<details><summary>Задача вашей жизни подробнее</summary><p>' + L.text + '</p></details></section>';
     r.spheres.forEach(function(x, i){
-      var s = x.s, id = 's-' + s.id;
-      h += '<section class="card" id="' + id + '"><div class="tag">Веха ' + (i+2) + '</div><h3>' + s.title + '</h3><div class="chips">' + x.st.map(function(t){return '<span class="chip ' + t + '">' + LABEL[t] + '</span>'}).join('') + '</div>';
-      x.st.forEach(function(t){ h += '<p>' + s[t] + '</p>'; });
-      h += '<h4>Признаки, что это уже началось</h4><ul>' + s.signs.map(function(g){return '<li>' + g + '</li>'}).join('') + '</ul>';
-      h += '<h4>Что можно сделать уже сейчас</h4><p>' + SELF[s.id] + '</p>';
-      h += article(s.id) + '</section>';
+      var s = x.s, c = COPY[s.id];
+      h += '<section class="card" id="s-' + s.id + '"><img class="ill" src="img/sfera-' + c.img + '.jpg" alt=""><div class="tag">Веха ' + (i+2) + ' · ' + s.title + '</div><h3>' + c.title + '</h3>';
+      h += '<p class="pain">' + c.pain + '</p>';
+      h += '<h4>Что 2027 год значит для вас</h4><div class="chips">' + x.st.map(function(t){return '<span class="chip ' + t + '">' + LABEL[t] + '</span>'}).join('') + '</div><p>' + s[x.st[0]] + '</p>';
+      h += '<p class="pair"><span>Попробуйте уже сейчас</span>' + SELF[s.id] + '</p>';
+      h += '<div class="paid"><p>' + c.sol + '</p><a class="btn" href="' + LANDING[s.product] + '" target="_blank" onclick="return window.__g(\'' + s.product + '\')">' + c.btn + '</a>' + (c.alt ? '<a class="alt" href="' + LANDING.year + '" target="_blank" onclick="return window.__g(\'year\')">' + c.alt + '</a>' : '') + '</div></section>';
     });
-    h += '<section class="card offer" id="offer"><img src="img/oksana-kniga.jpg" alt="Оксана Смирнова с книгой по натальной астрологии"><div class="kick">Что дальше</div><h3>' + hi + 'что я сделаю для вас дальше</h3>';
-    h += '<p>Вы увидели, какую задачу приносит 2027 год. Это картина по вашей дате рождения. А вот когда задача включится, в каком месяце будет легко, а в каком лучше подстраховаться, зависит от вашего точного времени и места рождения</p>';
-    h += '<p>Прогноз не приговор, а карта. Моя задача не предсказать «сбудется или нет», а дать вам даты, периоды и план действий на весь год</p>';
-    h += '<div class="prod"><h4>Прогноз на 2027 год по всем сферам</h4><ul><li>картина года по сферам: деньги, работа, любовь, семья, здоровье, дети</li><li>самые благоприятные и самые напряжённые периоды с датами</li><li>компенсирующие действия на трудные периоды</li><li>голосовой разбор 40-60 минут и PDF на весь год</li></ul><a class="btn" href="' + TG + '" target="_blank" onclick="return window.__g(\'year\')">Хочу прогноз на 2027 год</a></div>';
-    h += '<div class="prod"><h4>Мой денежный год 2027</h4><ul><li>ваша денежная модель по карте: таланты, через что зарабатывать, какой формат вам подходит</li><li>финансовая картина года и денежные периоды</li><li>денежные дни: когда продавать, подписывать, поднимать цену</li><li>компенсирующие действия на денежные периоды и личный созвон</li></ul><a class="btn" href="' + TG + '" target="_blank" onclick="return window.__g(\'money\')">Хочу свой денежный год 2027</a></div>';
+    h += '<section class="card offer" id="offer"><img src="img/oksana-kniga.jpg" alt="Оксана Смирнова"><div class="kick">Что дальше</div><h3>' + hi + 'ваш 2027 можно прожить по плану</h3>';
+    h += '<p>Вы увидели свою задачу года. Когда она включится и что делать в каждый период, видно по точному времени и месту рождения. Прогноз не приговор, а карта</p>';
+    h += '<a class="btn" href="' + LANDING.year + '" target="_blank" onclick="return window.__g(\'year\')">Прогноз на 2027 год по всем сферам</a><a class="btn ghost" href="' + LANDING.money + '" target="_blank" onclick="return window.__g(\'money\')">Мой денежный год 2027</a>';
     h += '<p class="gift">🎁 Любой из разборов можно подарить близкому на Новый год</p></section>';
     var res = document.getElementById('res'); res.innerHTML = h; res.hidden = false;
+    var TEASE = {task:'Что 2027 у вас заберёт и что даст', money:'Как выйти на новый уровень дохода', career:'Пора ли менять работу', love:'Кто войдёт в вашу жизнь', health:'Куда утекают ваши силы'};
+    var TAG = {focus:'поворот года', release:'отпустить старое', exam:'экзамен Сатурна', calm:'тихая зона'};
+    document.querySelectorAll('.lbl[data-s]').forEach(function(l){
+      var k = l.getAttribute('data-s'), sp = r.spheres.filter(function(x){return x.s.id===k})[0];
+      var title = {task:'Ваша задача', money:'Финансы', career:'Карьера', love:'Отношения', health:'Здоровье'}[k];
+      l.innerHTML = '<small>' + title + (sp ? ' · ' + TAG[sp.st[0]] : (r.flags.length ? ' · особый год' : '')) + '</small>' + TEASE[k] + ' →';
+    });
+    var road = document.getElementById('road'); road.hidden = false;
     document.querySelectorAll('.lbl').forEach(function(l){ l.classList.add('on'); });
     goal('calc');
-    document.getElementById('s-task').scrollIntoView({behavior:'smooth'});
+    road.scrollIntoView({behavior:'smooth'});
   });
   var q = new URLSearchParams(location.search);
-  if(q.get('d')){ document.getElementById('bd').value = q.get('d'); if(q.get('n')) document.getElementById('name').value = q.get('n'); document.getElementById('f').dispatchEvent(new Event('submit')); }
+  if(q.get('d')){ document.getElementById('bd').value = q.get('d'); document.getElementById('f').dispatchEvent(new Event('submit')); }
   window.__g = function(p){ goal(p === 'money' ? 'click_money' : 'click_year'); return true; };
 })();
 </script>
