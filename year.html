@@ -49,6 +49,31 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 .selfq-h{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:#8a5f1e;font-size:14px;margin-bottom:6px}
 .art h3.warn{color:#9a3a1a}
 .art-end{font-weight:700;color:var(--wine)}
+.fig{margin:16px -18px;}.fig img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover}.fig figcaption{font-size:13px;color:var(--mut);text-align:center;padding:8px 18px 0;font-style:italic}
+.viz{margin:16px 0;padding:16px;border-radius:16px;background:linear-gradient(180deg,#fff,#fbf4ea);border:1px solid rgba(201,160,99,.45)}
+.viz-h{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:14px;text-align:center;margin-bottom:12px}
+.viz-s{font-size:12px;color:var(--mut);text-align:center;margin-top:10px;font-style:italic}
+.bars{display:flex;align-items:flex-end;justify-content:center;gap:22px;height:190px}
+.bar{width:110px;height:var(--h);background:linear-gradient(180deg,#e8d3b4,#d9bd93);border-radius:12px 12px 4px 4px;display:flex;flex-direction:column;justify-content:flex-start;align-items:center;padding:8px 6px;text-align:center}
+.bar.hi{background:linear-gradient(180deg,#9b2c45,#7d1d33);color:#fff}
+.bar b{font-family:Montserrat,sans-serif;font-weight:900;font-size:17px}.bar.hi b{font-size:30px}.bar span{font-size:11px;line-height:1.25;margin-top:4px}
+.months{display:grid;grid-template-columns:repeat(6,1fr);gap:6px}
+.months div{border-radius:10px;padding:8px 2px;text-align:center;font-size:12px;font-weight:700;background:#f1e8db;color:#7a6a6e}
+.months .g{background:#e3f1e6;color:#2f7a48}.months .h{background:#f6dcdc;color:#9a2b3b}
+.legend{display:flex;justify-content:center;gap:12px;margin-top:10px;font-size:12px}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:4px;vertical-align:middle}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}
+.cal div{aspect-ratio:1;border-radius:8px;background:#fff;border:1px solid #eee2d2;font-size:12px;display:flex;align-items:center;justify-content:center;color:#7a6a6e}
+.cal .w{background:none;border:0;font-weight:700;color:var(--wine);font-size:11px;aspect-ratio:auto}
+.cal .m{background:linear-gradient(180deg,#f6d99a,#c9a063);color:#5a3a10;font-weight:900;border:0;box-shadow:0 3px 10px rgba(201,160,99,.5)}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.duo div{border-radius:14px;padding:12px;text-align:center;font-size:13px;line-height:1.35}
+.duo .l{background:#f6e3e3;color:#7d1d33}.duo .r{background:#e3f1e6;color:#2f7a48}
+.duo b{display:block;font-size:26px;margin-bottom:4px}.duo strong{display:block;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:12px;margin-bottom:4px}
+.cmp{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cmp>div{border-radius:14px;padding:12px;background:#fff;border:1px solid #eee2d2}.cmp>div.best{border:2px solid var(--wine)}
+.cmp h5{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:12px;color:var(--wine);margin:0 0 8px;text-align:center}
+.cmp p{margin:0 0 6px!important;font-size:13px}.cmp .y:before{content:"✓ ";color:#2f7a48;font-weight:900}.cmp .n:before{content:"✕ ";color:#b04050;font-weight:900}.cmp .n{color:#9a8a8e}
+.op{margin:22px 0}.op img{width:100%;height:440px;object-fit:cover;object-position:50% 22%;border-radius:22px;display:block;box-shadow:0 14px 40px rgba(125,29,51,.15)}.op figcaption{text-align:center;margin-top:10px;font-size:14px;color:var(--mut)}.op figcaption b{display:block;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:15px}
 .back{display:block;text-align:center;color:var(--wine);margin-top:18px}
 .sph{border:1.5px solid var(--line);border-radius:20px;padding:0 0 16px;margin:16px 0;background:#fff;overflow:hidden;scroll-margin-top:12px}
 .sph img{width:100%;height:190px;object-fit:cover;display:block}
@@ -70,9 +95,11 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
     <div class="art-t">3 минуты чтения</div>
     <h2>Почему один и тот же год у вас будет и трудным, и удачным одновременно</h2>
     <p class="art-lead">Мы привыкли спрашивать: «Каким будет мой 2027 год, хорошим или плохим?» Но год почти никогда не бывает одним цветом. В одной сфере он даёт проверку, а в другой в это же время открывает двери</p>
+    <figure class="fig"><img src="img/art-god.jpg" alt=""><figcaption>Один год, но в каждой сфере свой сезон</figcaption></figure>
 
     <h3><i>1</i>Год идёт по всем сферам сразу</h3>
     <p>Покажу на себе. За один месяц я оказалась в больнице с ребёнком, сама прошла обследование, где нашли хроническое воспаление, и в это же время у меня начал расти блог</p>
+    <div class="viz"><div class="viz-h">Мой реальный месяц</div><div class="duo"><div class="l"><b>🏥</b><strong>Семья и здоровье</strong>больница с ребёнком и моё обследование</div><div class="r"><b>📈</b><strong>Работа</strong>в это же время растёт блог</div></div><div class="viz-s">Карта показала обе линии заранее</div></div>
     <blockquote>Не зная прогноза, я бы впала в жёсткий депресс из-за болезни ребёнка и в страх перед результатами. Но я заранее видела в карте обе линии: закрытые учреждения и здоровье, а рядом рост в работе. Поэтому я не опустила руки, а пользовалась тем, что давал месяц</blockquote>
     <p>Вот почему я не делю периоды на «хорошие» и «плохие». <b>Одна сфера может проседать, а другая в тот же момент даёт шанс, который легко упустить</b>, если смотреть только на трудное</p>
 
@@ -80,6 +107,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
     <p>Многие делают только соляр, карту вашего личного года. Он показывает главную тему и главные проверки года, но не говорит когда: в марте это случится или в ноябре</p>
     <p>Поэтому я добавляю транзиты, движение планет по вашей личной карте. <b>Они отвечают на вопрос «когда»</b>: в какие периоды действовать, а в какие подстраховаться. Это мало кто делает в годовом прогнозе</p>
     <p>И третье, компенсаторика. Простые действия, которые снижают напряжение трудного периода: пройти обследование заранее, сменить формат работы, отложить крупную покупку. Прогноз не приговор, а карта</p>
+    <div class="viz"><div class="viz-h">Что вы знаете о своём годе</div><div class="cmp"><div><h5>Только соляр</h5><p class="y">что может случиться</p><p class="n">когда это будет</p><p class="n">что делать в трудный период</p></div><div class="best"><h5>Мой прогноз</h5><p class="y">что может случиться</p><p class="y">когда: по транзитам</p><p class="y">что делать: компенсаторика</p></div></div></div>
 
     <h3><i>3</i>Как этим пользуются клиенты</h3>
     <blockquote>«Второй год обращаюсь за соляром… Пока получила, пока прослушала, пока переварила информацию… И я ещё это всё раз послушаю и перечитаю»</blockquote>
@@ -94,10 +122,12 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 
     <h3 class="warn">Что будет, если не знать</h3>
     <p>Трудный период в одной сфере кажется концом света, и вы не замечаете, что рядом открывается другая. Решения про работу, деньги и отношения принимаются на эмоциях, а потом выясняется, что момент был не тот</p>
+    <figure class="fig"><img src="img/art-karta.jpg" alt=""><figcaption>Голосовой разбор и PDF, к которым вы возвращаетесь весь год</figcaption></figure>
     <p class="quote">Мы смотрим погоду не потому, что боимся дождя, а чтобы взять зонт</p>
     <p class="art-end">Поэтому я делаю прогноз на 2027 год по всем сферам. Ниже рассказываю, что я разберу и как это проходит ↓</p>
   </article>
 
+  <figure class="op"><img src="img/oksana-alleya.jpg" alt="Оксана Смирнова"><figcaption><b>Оксана Смирнова</b>астролог: соляр, транзиты и компенсаторика</figcaption></figure>
   <section class="card">
     <h2>Как я считаю ваш год</h2>
     <div class="step"><b>1</b><p><span>Ваш космический паспорт</span>Дата, точное время и место рождения. У подруги, родившейся в тот же день, год сложится по-другому</p></div>
@@ -118,6 +148,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
   <section class="sph" id="health"><img src="img/sfera-zdorovie.jpg" alt=""><div class="in"><div class="tg">Здоровье и силы</div><h3>Важные точки 2027 года для тела</h3>
     <ul class="ch"><li>в какие периоды особенно беречь силы и не брать лишнего</li><li>когда стоит пройти обследование заранее</li><li>где утекает энергия и как её вернуть</li><li>компенсирующие действия на напряжённые периоды</li></ul><p style="font-size:13px;color:var(--mut)">Карта не заменяет врача, она подсказывает, когда к себе прислушаться внимательнее</p></div></section>
 
+  <figure class="op"><img src="img/oksana-vecher.jpg" alt="Оксана Смирнова"><figcaption><b>«Мы смотрим погоду, чтобы взять зонт»</b>ваш год можно прожить по плану</figcaption></figure>
   <h2 style="text-align:center;margin-top:26px">Выберите формат</h2>
 
   <section class="tar">
