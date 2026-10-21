@@ -111,7 +111,7 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
   var K = window.KARMA;
   var TG = 'https://t.me/okssmi';
   function goal(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n) }catch(e){} }
-  var LANDING = {money: 'money.html', year: TG};
+  var LANDING = {money: 'money.html', year: 'year.html'};
   var SELF = {
     money:'Вспомните три случая, когда деньги пришли к вам легче всего: через какое дело, каких людей, в какой роли. Это подсказка, где ваш денежный канал, и в 2027 году на него стоит сделать ставку',
     career:'Выпишите три задачи, которые вы делаете за других, и одну, которую давно хотите взять себе. Это и есть ваш первый шаг к новой роли',
@@ -134,8 +134,8 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
       'Всё это я собираю в личный прогноз на 2027 год по всем сферам. Вы получаете мой голосовой разбор и PDF, к которому возвращаетесь весь год']
   };
   function article(id){
-    if(id === 'money'){ var m = ART.money; return '<div class="paid"><h4>' + m.h + '</h4>' + m.p.map(function(t){return '<p>' + t + '</p>'}).join('') + '<a class="btn" href="' + LANDING.money + '" target="_blank" onclick="return window.__g(\'money\')">' + m.btn + '</a></div>'; }
-    return '<div class="paid"><h4>Как я смотрю это в прогнозе</h4><p>' + ART[id] + '</p>' + ART.year.map(function(t){return '<p>' + t + '</p>'}).join('') + '<a class="btn" href="' + LANDING.year + '" target="_blank" onclick="return window.__g(\'year\')">Как проходит прогноз на 2027 год</a></div>';
+    if(id === 'money'){ var m = ART.money; return '<div class="paid"><h4>' + m.h + '</h4>' + m.p.map(function(t){return '<p>' + t + '</p>'}).join('') + '<a class="btn" href="' + LANDING.money + '" onclick="return window.__g(\'money\')">' + m.btn + '</a></div>'; }
+    return '<div class="paid"><h4>Как я смотрю это в прогнозе</h4><p>' + ART[id] + '</p>' + ART.year.map(function(t){return '<p>' + t + '</p>'}).join('') + '<a class="btn" href="' + LANDING.year + '" onclick="return window.__g(\'year\')">Как проходит прогноз на 2027 год</a></div>';
   }
   var COPY = {
     money:{img:'dengi', title:'Как в 2027 году выйти на новый уровень в доходе и деньгах', pain:'«То пусто, то густо». Работы всё больше, а доход стоит на месте, и непонятно, куда двигаться дальше',
@@ -177,11 +177,11 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
       h += '<div class="express"><div class="ex-h">Экспресс-разбор 2027</div><div class="chips">' + x.st.map(function(t){return '<span class="chip ' + t + '">' + LABEL[t] + '</span>'}).join('') + '</div><p>' + s[x.st[0]] + '</p>';
       h += '<div class="ex-h2">Признаки, что это уже началось</div><ul>' + s.signs.map(function(g){return '<li>' + g + '</li>'}).join('') + '</ul>';
       h += '<p class="pair"><span>Попробуйте уже сейчас</span>' + SELF[s.id] + '</p></div>';
-      h += '<div class="paid"><p>' + c.sol + '</p><a class="btn" href="' + LANDING[s.product] + '"' + (s.product === 'money' ? '' : ' target="_blank"') + ' onclick="return window.__g(\'' + s.product + '\')">' + c.btn + '</a>' + (c.alt ? '<a class="alt" href="' + LANDING.year + '" target="_blank" onclick="return window.__g(\'year\')">' + c.alt + '</a>' : '') + '</div></section>';
+      h += '<div class="paid"><p>' + c.sol + '</p><a class="btn" href="' + LANDING[s.product] + (s.product === 'year' ? '#' + s.id : '') + '" onclick="return window.__g(\'' + s.product + '\')">' + c.btn + '</a>' + (c.alt ? '<a class="alt" href="' + LANDING.year + '" onclick="return window.__g(\'year\')">' + c.alt + '</a>' : '') + '</div></section>';
     });
     h += '<section class="card offer" id="offer"><img src="img/oksana-kniga.jpg" alt="Оксана Смирнова"><div class="kick">Что дальше</div><h3>' + hi + 'ваш 2027 можно прожить по плану</h3>';
     h += '<p>Вы увидели свою задачу года. Когда она включится и что делать в каждый период, видно по точному времени и месту рождения. Прогноз не приговор, а карта</p>';
-    h += '<a class="btn" href="' + LANDING.year + '" target="_blank" onclick="return window.__g(\'year\')">Прогноз на 2027 год по всем сферам</a><a class="btn ghost" href="' + LANDING.money + '" target="_blank" onclick="return window.__g(\'money\')">Мой денежный год 2027</a>';
+    h += '<a class="btn" href="' + LANDING.year + '" onclick="return window.__g(\'year\')">Прогноз на 2027 год по всем сферам</a><a class="btn ghost" href="' + LANDING.money + '" onclick="return window.__g(\'money\')">Мой денежный год 2027</a>';
     h += '<p class="gift">🎁 Любой из разборов можно подарить близкому на Новый год</p></section>';
     var res = document.getElementById('res'); res.innerHTML = h; res.hidden = false;
     var TEASE = {task:'Ваша кармическая задача на 2027 год', money:'Как выйти на новый уровень дохода', career:'Пора ли менять работу', love:'Кто войдёт в вашу жизнь', health:'Куда утекают ваши силы и энергия'};
