@@ -110,6 +110,11 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
 .paid a.btn[href^="money.html"]{background:linear-gradient(135deg,#b8862f,#f3d58b 35%,#c99a3f 55%,#f6dfa2 75%,#b07a25)!important;color:#4a2c05!important;box-shadow:0 10px 26px rgba(176,122,37,.45)!important;text-shadow:0 1px 0 rgba(255,255,255,.4)}
 .paid a.btn[href^="year.html"]{background:linear-gradient(135deg,#fdfbf7,#f1e6f0 30%,#e6eef6 50%,#fbf3e6 70%,#f0e4ea)!important;color:var(--wine)!important;border:1px solid rgba(201,160,99,.55)!important;box-shadow:0 10px 26px rgba(125,29,51,.15),inset 0 1px 0 #fff!important}
 .paid a.btn[href^="money.html"]:after,.paid a.btn[href^="year.html"]:after{content:"";position:absolute;top:0;bottom:0;left:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);animation:sheen 3.2s ease-in-out infinite}
+.pair.kp{border:1.5px dashed rgba(201,160,99,.85);border-radius:14px;padding:12px 14px;margin:0 0 12px!important;font-size:15px;color:var(--txt);font-weight:500}
+.pair.kp span{font-size:13px!important;letter-spacing:.06em!important;font-weight:900!important;margin-bottom:4px;font-family:Montserrat,sans-serif}
+.pair.grow{background:#eef7ef}.pair.grow span{color:#2f7a48!important}
+.pair.drop{background:#fdf0e3}.pair.drop span{color:#9a5a17!important}
+.pair.sat{background:linear-gradient(160deg,#9b2c45,#7d1d33);color:#fff;border-color:#f6d99a;box-shadow:0 8px 20px rgba(125,29,51,.25)}.pair.sat span{color:#f6d99a!important;font-size:14px!important}
 .road-cap small{display:block;font:600 11px Manrope,sans-serif;letter-spacing:.06em;text-transform:none!important;color:var(--txt);text-transform:uppercase;margin-top:4px}
 .road-cap{position:absolute;left:0;right:0;top:3%;text-align:center;z-index:2;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:19px;line-height:1.1;color:var(--wine);top:-92px!important;padding:0 12px}
 </style>
@@ -205,9 +210,9 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
     h += '<section class="res-head"><div class="kick">Ваш расчёт</div><h2>' + (name ? name + ', ваша' : 'Ваша') + ' кармическая задача 2027</h2><p class="meta">Солнце ' + K.SIGNS_IN[r.sun] + ' · Северный узел ' + K.SIGNS_IN[r.nn] + ' · Сатурн ' + K.SIGNS_IN[r.sat] + '</p></section>';
     h += '<section class="card" id="s-task"><img class="ill" src="img/sfera-zadacha.jpg" alt=""><div class="tag">Веха 1</div><h3>Ваша кармическая задача на 2027 год</h3>';
     r.flags.forEach(function(f){ h += '<p class="flag">✦ ' + K.FLAG[f] + '</p>'; });
-    h += '<p class="pair"><span>Куда расти</span>' + L.grow + '</p><p class="pair"><span>Что отпустить</span>' + L.drop + '</p>';
+    h += '<p class="pair kp grow"><span>🌱 Куда расти</span>' + L.grow + '</p><p class="pair kp drop"><span>🍂 Что отпустить</span>' + L.drop + '</p>';
     h += '<p>' + bf(K.YEAR[r.hNN]) + '</p>';
-    h += '<p class="pair"><span>Где 2027 потребует взрослости</span>' + K.SAT[r.hSat] + '</p>';
+    h += '<p class="pair kp sat"><span>⏳ Где 2027 потребует взрослости</span>' + K.SAT[r.hSat] + '</p>';
     h += '<div class="go"><p>Как задача 2027 года проявится в каждой сфере:</p><a href="#s-money">💰 Деньги</a><a href="#s-career">💼 Карьера</a><a href="#s-love">❤️ Отношения</a><a href="#s-health">🌿 Здоровье</a></div></section>';
     r.spheres.forEach(function(x, i){
       var s = x.s, c = COPY[s.id];
