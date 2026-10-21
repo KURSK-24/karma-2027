@@ -50,7 +50,7 @@ ul.ch{list-style:none}ul.ch li{position:relative;padding-left:26px;margin:0 0 10
 <div class="wrap">
   <header class="hero">
     <div class="kick">Оксана Смирнова · астролог</div>
-    <h1>Прогноз на 2027 год</h1>
+    <h1>Прогноз<br>на 2027 год</h1>
     <p>Ваш год по сферам и важным точкам: что может произойти, в какие периоды и что делать, когда становится трудно</p>
     <img class="photo" src="img/oksana-kniga.jpg" alt="Оксана Смирнова">
   </header>
@@ -113,7 +113,8 @@ ul.ch{list-style:none}ul.ch li{position:relative;padding-left:26px;margin:0 0 10
 function g(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n) }catch(e){} return true; }
 (function(){
   var NAMES = {career:'Карьера и бизнес', love:'Отношения', health:'Здоровье и силы'};
-  var k = location.hash.replace('#','');
+  var k = new URLSearchParams(location.search).get('s') || location.hash.replace('#','');
+  if('scrollRestoration' in history) history.scrollRestoration = 'manual'; window.scrollTo(0,0);
   if(NAMES[k]){ document.getElementById(k).classList.add('on'); document.getElementById('tA').textContent = NAMES[k] + ' · PDF на 2027 год'; document.getElementById('bA').textContent = 'Хочу PDF: ' + NAMES[k].toLowerCase(); }
   var KEY = 'karma27_start', LEN = 24*3600*1000, start;
   try{ start = +localStorage.getItem(KEY); if(!start){ start = Date.now(); localStorage.setItem(KEY, start); } }catch(e){ start = Date.now(); }

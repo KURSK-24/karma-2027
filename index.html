@@ -81,6 +81,21 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
 .ms.big .lbl b{display:block;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:16px;line-height:1.1;color:var(--wine)}
 .ms.big .lbl i{display:inline-block;margin-top:8px;font-style:normal;font-size:12px;font-weight:700;color:#fff;background:var(--wine);padding:5px 12px;border-radius:999px}
 @keyframes halo{50%{box-shadow:0 0 0 2px #e9c98f,0 0 0 10px rgba(255,255,255,.45),0 0 0 12px rgba(201,160,99,.5),0 0 60px 18px rgba(255,214,140,.95)}}
+.chip.calm{background:#e3f1e6;color:#2f7a48}.chip.release{background:#fbe9d6;color:#9a5a17}.chip.exam{background:#f3e3c4;color:#7a5520}.chip.focus{background:var(--wine);color:#fff}
+.express{background:#fff;border:1px solid var(--line)}.express b,.card>p b{color:var(--wine)}
+.note{position:relative;margin:14px 0;padding:14px 14px 10px 40px;border-radius:6px;background-color:#fffdf8;background-image:repeating-linear-gradient(180deg,transparent 0,transparent 27px,rgba(125,29,51,.13) 27px,rgba(125,29,51,.13) 28px);box-shadow:0 6px 18px rgba(80,40,20,.10);line-height:28px}
+.note:before{content:"";position:absolute;left:28px;top:0;bottom:0;width:1.5px;background:rgba(200,60,80,.45)}
+.note-h{font-weight:800;color:var(--wine);font-size:15px;text-align:left}
+.note ul li{font-size:15px!important;color:var(--txt)!important;text-align:left!important;line-height:28px}
+.note ul{list-style:none;margin:0!important}.note li{margin:0!important;position:relative}.note li:before{content:"✓";position:absolute;left:-22px;color:var(--wine);font-weight:900}
+.prac{margin:14px 0;padding:14px 16px;border-radius:16px;background:linear-gradient(135deg,#fff7e8,#fdf0d8);border:1.5px solid rgba(201,160,99,.6)}
+.prac-h{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:13px;letter-spacing:.06em;color:#8a5f1e;margin-bottom:4px}
+.prac p{margin:0!important;font-weight:600}
+.paid .lead{font-weight:800;font-size:17px;color:var(--txt);margin:0 0 8px!important}
+.pts{margin:0 0 12px 0!important;padding:0;list-style:none;counter-reset:n}.pts li{counter-increment:n;position:relative;padding:8px 10px 8px 42px;margin:0 0 8px!important;background:#fff;border-radius:12px;font-weight:700;color:var(--wine)}
+.pts li:before{content:counter(n);position:absolute;left:10px;top:50%;transform:translateY(-50%);width:24px;height:24px;border-radius:50%;background:var(--wine);color:#fff;font-size:13px;display:flex;align-items:center;justify-content:center}
+.paid .hl{font-weight:800;font-size:16px;line-height:1.45;text-decoration:underline;text-decoration-color:rgba(125,29,51,.45);text-underline-offset:4px;color:var(--wine);margin:4px 0 12px!important}
+.paid .btn.ghost{margin-top:10px;text-align:center;text-decoration:none;background:#fff;color:var(--wine);border:1.5px solid var(--wine);box-shadow:none}
 .road-cap small{display:block;font:600 11px Manrope,sans-serif;letter-spacing:.06em;text-transform:none!important;color:var(--txt);text-transform:uppercase;margin-top:4px}
 .road-cap{position:absolute;left:0;right:0;top:3%;text-align:center;z-index:2;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:19px;line-height:1.1;color:var(--wine);top:-92px!important;padding:0 12px}
 </style>
@@ -149,16 +164,17 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
   }
   var COPY = {
     money:{img:'dengi', title:'Как в 2027 году выйти на новый уровень в доходе и деньгах', pain:'«То пусто, то густо». Работы всё больше, а доход стоит на месте, и непонятно, куда двигаться дальше',
-      sol:'Новый уровень в доходе начинается с двух вещей: через что вам по карте проще зарабатывать и в какие месяцы 2027 года действовать. Деньги я разбираю и в годовом прогнозе. А если вам нужны именно деньги, глубоко и подробно, для этого мой «Денежный год 2027»',
-      btn:'Узнать свой денежный год 2027 →', alt:'или прогноз на 2027 год по всем сферам'},
+      lead:'Новый уровень дохода начинается с двух вещей:', pts:['Через что вам по карте проще зарабатывать','В какие месяцы 2027 года действовать'], hl:'Деньги я разбираю в общем годовом прогнозе. А если вам нужно глубоко и подробно, только про деньги, для этого мой «Денежный год 2027»', sol:'',
+      btn:'Узнать свой <b>ДЕНЕЖНЫЙ ГОД 2027</b> →', alt:'Прогноз на 2027 год по всем сферам →'},
     career:{img:'kariera', title:'Как в 2027 году найти своё дело и выйти на новый уровень в карьере и бизнесе', pain:'«Надоела работа, не понимаю, куда двигаться». Хочется уволиться или начать своё, но страшно ошибиться с моментом',
-      sol:'Уволиться, запуститься, попросить повышение: всё упирается в один вопрос, когда. В прогнозе на 2027 год я показываю, в какие месяцы карьера открывает двери, когда лучше закрепиться на месте и что делать в каждый период', btn:'Хочу прогноз на 2027 год'},
+      lead:'Уволиться, запуститься, попросить повышение: всё упирается в один вопрос, когда', pts:['Когда карьера открывает двери','Когда лучше закрепиться на месте'], hl:'В прогнозе на 2027 год я показываю важные точки года в работе и что делать в каждый период', sol:'', btn:'Хочу прогноз на 2027 год'},
     love:{img:'otnosheniya', title:'Как в 2027 году встретить своего человека или вывести пару на новый уровень', pain:'«Удастся ли построить отношения в следующем году?» Или пара есть, но одни и те же ссоры идут по кругу',
-      sol:'В прогнозе на 2027 год я показываю, когда год открывает знакомства, когда проверяет пару на прочность и как пройти эти периоды без потерь', btn:'Хочу прогноз на 2027 год'},
+      lead:'В отношениях 2027 года важно знать две вещи:', pts:['Когда год открывает знакомства','Когда пара проходит проверку на прочность'], hl:'В прогнозе на 2027 год я показываю эти периоды и как пройти их без потерь', sol:'', btn:'Хочу прогноз на 2027 год'},
     health:{img:'zdorovie', title:'Как в 2027 году сохранить силы и не выгореть', pain:'Со стороны всё пристойно, а внутри усталость, которую не снимает даже отпуск',
-      sol:'В прогнозе на 2027 год я показываю, в какие периоды беречь силы и не брать лишнего, и подбираю простые действия, которые снижают напряжение. Карта не заменяет врача, но подсказывает, когда прислушаться к себе внимательнее', btn:'Хочу прогноз на 2027 год'}
+      lead:'Чтобы не выгореть в 2027 году, важно знать:', pts:['В какие периоды беречь силы','Какие простые действия снимают напряжение'], hl:'В прогнозе на 2027 год я показываю эти периоды. Карта не заменяет врача, но подсказывает, когда прислушаться к себе внимательнее', sol:'', btn:'Хочу прогноз на 2027 год'}
   };
   var LABEL = {focus:'Кармический поворот', release:'Отпустить старое', exam:'Экзамен Сатурна', calm:'Спокойная зона'};
+  function bf(t){ var i = t.indexOf('. '); return i > 0 ? '<b>' + t.slice(0, i + 1) + '</b>' + t.slice(i + 1) : '<b>' + t + '</b>'; }
   function esc(s){ return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c]}) }
 
   var selD = document.getElementById('bdDay'), selM = document.getElementById('bdMonth'), selY = document.getElementById('bdYear');
@@ -177,17 +193,17 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
     h += '<section class="card" id="s-task"><img class="ill" src="img/sfera-zadacha.jpg" alt=""><div class="tag">Веха 1</div><h3>Ваша кармическая задача на 2027 год</h3>';
     r.flags.forEach(function(f){ h += '<p class="flag">✦ ' + K.FLAG[f] + '</p>'; });
     h += '<p class="pair"><span>Куда расти</span>' + L.grow + '</p><p class="pair"><span>Что отпустить</span>' + L.drop + '</p>';
-    h += '<p>' + K.YEAR[r.hNN] + '</p>';
+    h += '<p>' + bf(K.YEAR[r.hNN]) + '</p>';
     h += '<p class="pair"><span>Где 2027 потребует взрослости</span>' + K.SAT[r.hSat] + '</p>';
     h += '<div class="go"><p>Как задача 2027 года проявится в каждой сфере:</p><a href="#s-money">💰 Деньги</a><a href="#s-career">💼 Карьера</a><a href="#s-love">❤️ Отношения</a><a href="#s-health">🌿 Здоровье</a></div></section>';
     r.spheres.forEach(function(x, i){
       var s = x.s, c = COPY[s.id];
       h += '<section class="card" id="s-' + s.id + '"><img class="ill" src="img/sfera-' + c.img + '.jpg" alt=""><div class="tag">Веха ' + (i+2) + ' · ' + s.title + '</div><h3>' + c.title + '</h3>';
       h += '<p class="pain">' + c.pain + '</p>';
-      h += '<div class="express"><div class="ex-h">Экспресс-разбор 2027</div><div class="chips">' + x.st.map(function(t){return '<span class="chip ' + t + '">' + LABEL[t] + '</span>'}).join('') + '</div><p>' + s[x.st[0]] + '</p>';
-      h += '<div class="ex-h2">Признаки, что это уже началось</div><ul>' + s.signs.map(function(g){return '<li>' + g + '</li>'}).join('') + '</ul>';
-      h += '<p class="pair"><span>Попробуйте уже сейчас</span>' + SELF[s.id] + '</p></div>';
-      h += '<div class="paid"><p>' + c.sol + '</p><a class="btn" href="' + LANDING[s.product] + (s.product === 'year' ? '#' + s.id : '') + '" onclick="return window.__g(\'' + s.product + '\')">' + c.btn + '</a>' + (c.alt ? '<a class="alt" href="' + LANDING.year + '" onclick="return window.__g(\'year\')">' + c.alt + '</a>' : '') + '</div></section>';
+      h += '<div class="express"><div class="ex-h">Экспресс-разбор 2027</div><div class="chips">' + x.st.map(function(t){return '<span class="chip ' + t + '">' + LABEL[t] + '</span>'}).join('') + '</div><p>' + bf(s[x.st[0]]) + '</p></div>';
+      h += '<div class="note"><div class="note-h">Признаки, что это уже началось</div><ul>' + s.signs.map(function(g){return '<li>' + g + '</li>'}).join('') + '</ul></div>';
+      h += '<div class="prac"><div class="prac-h">✍️ Практика на сегодня</div><p>' + SELF[s.id] + '</p></div>';
+      h += '<div class="paid"><p class="lead">' + c.lead + '</p><ol class="pts">' + c.pts.map(function(t){return '<li>' + t + '</li>'}).join('') + '</ol><p class="hl">' + c.hl + '</p><a class="btn" href="' + LANDING[s.product] + (s.product === 'year' ? '?s=' + s.id : '') + '" onclick="return window.__g(\'' + s.product + '\')">' + c.btn + '</a>' + (c.alt ? '<a class="btn ghost" href="' + LANDING.year + '" onclick="return window.__g(\'year\')">' + c.alt + '</a>' : '') + '</div></section>';
     });
     h += '<section class="card offer" id="offer"><img src="img/oksana-kniga.jpg" alt="Оксана Смирнова"><div class="kick">Что дальше</div><h3>' + hi + 'ваш 2027 можно прожить по плану</h3>';
     h += '<p>Вы увидели свою задачу года. Когда она включится и что делать в каждый период, видно по точному времени и месту рождения. Прогноз не приговор, а карта</p>';
