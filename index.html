@@ -98,6 +98,11 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
 .scroll-h{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;letter-spacing:.06em;font-size:13px;color:#7a4a17;text-align:center;margin-bottom:10px}
 .scroll ul{list-style:none;margin:0!important}.scroll li{position:relative;padding-left:22px;margin:0 0 8px!important;color:#4a3420;font-size:15px}
 .scroll li:before{content:"✦";position:absolute;left:0;color:#9b6a2b}
+@keyframes tap{0%,100%{transform:translateY(0) scale(1)}40%{transform:translateY(4px) scale(.88)}55%{transform:translateY(0) scale(1)}}
+.tap{display:inline-block;font-size:16px;animation:tap 1.4s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes wig{0%,78%,100%{transform:rotate(0) scale(1)}82%{transform:rotate(-7deg) scale(1.08)}86%{transform:rotate(6deg) scale(1.08)}90%{transform:rotate(-4deg) scale(1.04)}94%{transform:rotate(2deg) scale(1)}}
+.ms:not(.big) .dot{animation:wig 3.2s ease-in-out infinite}
+.road a.ms:nth-of-type(1) .dot{animation-delay:0s}.road a.ms:nth-of-type(2) .dot{animation-delay:.6s}.road a.ms:nth-of-type(3) .dot{animation-delay:1.2s}.road a.ms:nth-of-type(4) .dot{animation-delay:1.8s}
 .road-cap small{display:block;font:600 11px Manrope,sans-serif;letter-spacing:.06em;text-transform:none!important;color:var(--txt);text-transform:uppercase;margin-top:4px}
 .road-cap{position:absolute;left:0;right:0;top:3%;text-align:center;z-index:2;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:19px;line-height:1.1;color:var(--wine);top:-92px!important;padding:0 12px}
 </style>
@@ -120,7 +125,7 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
 </div>
 
 <div class="road" id="road" hidden>
-  <div class="road-cap">Ваша кармическая задача на 2027 год по сферам<small>Нажмите на жемчужину, и сфера раскроется подробнее</small></div>
+  <div class="road-cap">Ваша кармическая задача на 2027 год по сферам<small><span class="tap">👆</span> Нажмите на жемчужину, и сфера откроется подробнее</small></div>
   <a class="ms left" href="#s-health" style="left:76.6%;top:12.6%"><span class="dot"></span><span class="lbl" data-s="health"><small>Веха 5</small>Здоровье</span></a>
   <a class="ms left" href="#s-love" style="left:51.2%;top:23.6%"><span class="dot"></span><span class="lbl" data-s="love"><small>Веха 4</small>Отношения</span></a>
   <a class="ms left" href="#s-career" style="left:63.2%;top:35.9%"><span class="dot"></span><span class="lbl" data-s="career"><small>Веха 3</small>Карьера</span></a>
