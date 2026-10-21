@@ -104,6 +104,12 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
 .ms:not(.big) .dot{animation:wig 3.2s ease-in-out infinite}
 .road a.ms:nth-of-type(1) .dot{animation-delay:0s}.road a.ms:nth-of-type(2) .dot{animation-delay:.6s}.road a.ms:nth-of-type(3) .dot{animation-delay:1.2s}.road a.ms:nth-of-type(4) .dot{animation-delay:1.8s}
 .nextv{display:block;text-align:center;margin-top:16px;padding:14px;border-radius:14px;border:1.5px dashed var(--gold);color:var(--wine);font-weight:800;text-decoration:none;background:#fffaf2}
+.nextv{border:0!important;background:linear-gradient(180deg,#a8324c,#7d1d33)!important;color:#fff!important;box-shadow:0 10px 24px rgba(125,29,51,.3)}
+@keyframes sheen{0%{transform:translateX(-120%) skewX(-20deg)}60%,100%{transform:translateX(260%) skewX(-20deg)}}
+.paid a.btn[href^="money.html"],.paid a.btn[href^="year.html"]{position:relative;overflow:hidden;border:0}
+.paid a.btn[href^="money.html"]{background:linear-gradient(135deg,#b8862f,#f3d58b 35%,#c99a3f 55%,#f6dfa2 75%,#b07a25)!important;color:#4a2c05!important;box-shadow:0 10px 26px rgba(176,122,37,.45)!important;text-shadow:0 1px 0 rgba(255,255,255,.4)}
+.paid a.btn[href^="year.html"]{background:linear-gradient(135deg,#fdfbf7,#f1e6f0 30%,#e6eef6 50%,#fbf3e6 70%,#f0e4ea)!important;color:var(--wine)!important;border:1px solid rgba(201,160,99,.55)!important;box-shadow:0 10px 26px rgba(125,29,51,.15),inset 0 1px 0 #fff!important}
+.paid a.btn[href^="money.html"]:after,.paid a.btn[href^="year.html"]:after{content:"";position:absolute;top:0;bottom:0;left:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);animation:sheen 3.2s ease-in-out infinite}
 .road-cap small{display:block;font:600 11px Manrope,sans-serif;letter-spacing:.06em;text-transform:none!important;color:var(--txt);text-transform:uppercase;margin-top:4px}
 .road-cap{position:absolute;left:0;right:0;top:3%;text-align:center;z-index:2;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;font-size:19px;line-height:1.1;color:var(--wine);top:-92px!important;padding:0 12px}
 </style>
