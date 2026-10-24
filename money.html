@@ -136,6 +136,31 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 .art-end{display:block;margin:14px -18px -18px!important;padding:16px 18px;border-radius:0 0 20px 20px;background:linear-gradient(135deg,#b8862f,#f3d58b 45%,#c99a3f);color:#4a2c05!important;font-size:16px;text-align:center;text-decoration:underline;text-decoration-color:rgba(74,44,5,.4);text-underline-offset:4px}
 .tg-note{font-size:12px;color:var(--mut);text-align:center;margin-top:8px}
 .back{display:block;text-align:center;color:var(--wine);margin-top:18px}
+.sost{margin-top:8px}.sost li{font-size:14px;margin:0 0 6px!important}
+.gsteps .step>div{flex:1;min-width:0}.gsteps .step>div>p{margin:0 0 6px}
+.otz figure{margin:0 0 16px}.otz img{display:block;max-width:100%;height:auto;margin:0 auto;border-radius:14px;box-shadow:0 6px 18px rgba(125,29,51,.08)}.otz figcaption{font-size:13px;color:var(--mut);text-align:center;margin-top:8px;font-style:italic}
+.bridge{font-size:14px;margin:6px 0 0!important}
+.case{margin:14px 0;padding:16px 16px 14px;background:#fbefe2;border:1px solid rgba(201,160,99,.45);border-radius:14px}
+.case-lbl{display:inline-block;background:var(--wine);color:#fff;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 12px;border-radius:999px;margin:0 0 10px}
+.case-t{font-family:Montserrat,sans-serif;font-weight:800;font-size:17px;color:var(--wine);line-height:1.3;margin:0 0 10px}
+.case p{margin:0 0 8px}.case p:last-child{margin-bottom:0}
+.case .ba{display:grid;gap:8px;margin:6px 0 10px}.case .ba div{background:#fff;border-radius:10px;padding:10px 12px}.case .ba b{color:var(--wine)}
+.to-price{position:fixed;left:50%;bottom:14px;transform:translate(-50%,140%);width:calc(100% - 32px);max-width:440px;z-index:50;display:block;text-align:center;text-decoration:none;border-radius:14px;padding:15px 16px;font:800 16px Manrope,sans-serif;overflow:hidden;transition:transform .35s ease;background:linear-gradient(135deg,#b8862f,#f3d58b 35%,#c99a3f 55%,#f6dfa2 75%,#b07a25);color:#4a2c05;box-shadow:0 10px 26px rgba(176,122,37,.45);text-shadow:0 1px 0 rgba(255,255,255,.4)}.to-price.on{transform:translate(-50%,0)}.to-price:after{content:"";position:absolute;top:0;bottom:0;left:0;width:40%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.75),transparent);animation:shp 3.2s ease-in-out infinite;pointer-events:none}@keyframes shp{0%{transform:translateX(-120%) skewX(-20deg)}60%,100%{transform:translateX(260%) skewX(-20deg)}}@media (prefers-reduced-motion:reduce){.to-price:after{animation:none}.to-price{transition:none}}body{padding-bottom:84px}
+.upsell{background:var(--cream);border-radius:12px;padding:12px 14px;font-size:14.5px;margin:12px 0 0}.upsell a{color:var(--wine);font-weight:700}
+.fmt3{margin:6px 0 16px}
+.t3{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:11.5px;overflow-wrap:anywhere;hyphens:auto;line-height:1.35;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.t3 th{background:var(--wine);color:#fff;font-weight:800;padding:8px 3px;font-size:11px;vertical-align:bottom}
+.t3 th:last-child{background:linear-gradient(135deg,#b8862f,#e9c47a 50%,#b07a25);color:#4a2c05}
+.t3 td{padding:7px 3px;border-top:1px solid var(--line);text-align:center;vertical-align:top}
+.t3 th:first-child,.t3 td:first-child{width:31%}.t3 td:first-child{text-align:left;font-weight:600;padding-left:7px}
+.t3 td:last-child{background:#fbf1e1}
+.t3 tr.pr td{font-family:Montserrat,sans-serif;font-weight:900;color:var(--wine);font-size:12px;white-space:nowrap}
+.t3 tr.sum td{font-weight:700;color:var(--wine)}
+.trk-do{font-weight:800;color:var(--wine);margin:10px 0 4px;font-size:14px}
+.trk-card label{display:flex;gap:8px;align-items:flex-start;margin:6px 0 0;font-weight:600}
+.trk-card label input{margin-top:4px;flex:none}
+.trk-prog{position:relative;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;margin:0 0 10px;font-size:14px;overflow:hidden;text-align:center}
+.trk-prog b{color:var(--wine)}.trk-prog i{position:absolute;left:0;top:0;bottom:0;background:rgba(201,160,99,.25);transition:width .3s}.trk-prog span{position:relative}
 </style>
 </head>
 <body>
@@ -143,48 +168,62 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
   <header class="hero">
     <div class="kick">Оксана Смирнова · финансовый астролог</div>
     <h1>Мой денежный год 2027</h1>
-    <p>Разбор вашего 2027 года только про деньги: через что вам проще зарабатывать и в какие месяцы действовать, чтобы выйти на новый уровень дохода</p>
+    <p>Разбор только про деньги: ваш денежный потенциал по натальной карте на всю жизнь и ваш денежный 2027 год, чего ждать, где подстраховаться и как выйти на новый уровень дохода</p>
     <img class="photo" src="img/oksana-kofe.jpg" alt="Оксана Смирнова">
   </header>
 
   <article class="art">
 <div class="card art-head">
     <div class="art-t">3 минуты чтения</div>
-    <h2>Как узнать свой денежный год 2027: три вещи, которые видно по дате рождения</h2>
-    <p class="art-lead">Почему в 2027 году одни выйдут на новый доход, а другие будут работать ещё больше за те же деньги? Дело обычно в двух вещах: в каком деле вы пытаетесь заработать и в какой момент действуете</p>
-    <figure class="fig"><img src="img/art-razvilka.jpg" alt=""><figcaption>Один и тот же год можно пройти по двум дорогам: в своём деле и в своё время или наугад</figcaption></figure>
-    <p>Многие ждут «удачный денежный год», как будто он просто случится. За 300 с лишним разборов «Путь Звезды» я увидела другое: <b>деньги приходят, когда совпадают ваш денежный канал и ваше время</b>. Вот три вещи, которые я смотрю, чтобы найти это совпадение</p>
+    <h2>Как узнать свой денежный год 2027: три вещи, которые я смотрю в вашей карте</h2>
+    <p class="art-lead">Почему в 2027 году <u>одни выйдут на новый доход, а другие будут работать ещё больше за те же деньги</u>? Дело обычно в двух вещах: в каком деле вы пытаетесь заработать и что год вообще приготовил вам в деньгах</p>
+    <figure class="fig"><img src="img/art-razvilka.jpg" alt=""><figcaption>Один и тот же год можно пройти по двум дорогам: в своём деле и с подстраховкой или наугад</figcaption></figure>
+    <p>Многие ждут «удачный денежный год», как будто он просто случится. За 300 с лишним разборов «Путь Звезды» я увидела другое: <b>деньги растут, когда вы зарабатываете своим способом и знаете, что приносит вам год</b>. Вот три вещи, которые я смотрю, чтобы это совпало</p>
 
     </div><div class="stp stp-1"><img class="stp-img" src="img/st-kanal.jpg" alt="">
     <h3><i>1</i>Ваш денежный канал</h3>
     <p>В натальной карте видно, через что вам проще зарабатывать: через своё дело или через карьеру, в одиночку или через команду, через продажи или через экспертность</p>
-    <blockquote>Мой муж Антон много лет был уверен, что ему подходит только свой бизнес. Доход стоял на уровне до 100 тысяч. В его карте сильный Марс: ему про карьеру, партнёрство и продажи через команду. Он ушёл в карьеру, <b>вырос в доходе в пять раз</b>, стал генеральным директором, и мы купили дом без ипотеки</blockquote>
-    <div class="viz"><div class="viz-h">Доход Антона</div><div class="bars"><div class="bar" style="--h:38%"><b>до 100 тыс</b><span>свой бизнес</span></div><div class="bar hi" style="--h:100%"><b>×5</b><span>карьера по карте: команда и продажи</span></div></div><div class="viz-s">Реальная история из моего канала</div></div>
+    <div class="case"><span class="case-lbl">Кейс</span>
+      <p class="case-t">Расскажу на примере моего мужа</p>
+      <div class="ba"><div><b>Было:</b> много лет уверен, что ему подходит только свой бизнес, доход до 100 тысяч</div><div><b>Карта показала:</b> сильный Марс, ему про карьеру, партнёрство и продажи через команду</div><div><b>Стало:</b> ушёл в карьеру, <b>доход вырос в пять раз</b>, стал генеральным директором, и мы купили дом без ипотеки</div></div>
+    </div>
+    <div class="viz"><div class="viz-h">Доход мужа</div><div class="bars"><div class="bar" style="--h:38%"><b>до 100 тыс</b><span>свой бизнес</span></div><div class="bar hi" style="--h:100%"><b>×5</b><span>карьера по карте: команда и продажи</span></div></div><div class="viz-s">Реальная история из моего канала</div></div>
     <p>Никакой магии здесь нет. Человек просто перестал зарабатывать «не своим» способом</p>
 
     </div><div class="stp stp-2"><img class="stp-img" src="img/st-periody.jpg" alt="">
-    <h3><i>2</i>Ваши денежные периоды</h3>
-    <p>Дальше я накладываю на вашу карту 2027 год. Соляр, карта вашего личного года, показывает главную денежную тему года. Транзиты, движение планет по вашей карте, показывают, когда: <b>в какие месяцы деньги идут легче, а в какие лучше не брать кредит и не рисковать</b></p>
-    <div class="viz"><div class="viz-h">Денежные месяцы года</div><div class="months"><div>Янв</div><div>Фев</div><div class="g">Мар</div><div class="g">Апр</div><div>Май</div><div class="h">Июн</div><div class="h">Июл</div><div>Авг</div><div class="g">Сен</div><div class="g">Окт</div><div>Ноя</div><div>Дек</div></div><div class="legend"><span><i style="background:#cfe8d5"></i>легче</span><span><i style="background:#f1cfcf"></i>осторожно</span><span><i style="background:#ece0cf"></i>ровно</span></div><div class="viz-s">Пример. В вашем разборе месяцы будут свои</div></div>
-    <blockquote>Покажу на себе. Этой осенью ретроградный Сатурн идёт по моему 11 дому, это интернет и аудитория. Охваты просели, как у многих. Я знала об этом заранее, поэтому не паниковала, а увеличила количество роликов. Когда знаешь, откуда трудность, паниковать некогда, ты работаешь</blockquote>
+    <h3><i>2</i>Ваш денежный 2027 год: тенденции и периоды</h3>
+    <p>Дальше я накладываю на вашу карту 2027 год. Главное здесь соляр, карта вашего личного года. Он показывает, что вообще возможно в деньгах в этом году: рост дохода, новый источник заработка или год, где важнее сохранить и укрепить</p>
+    <p>Транзиты, движение планет по вашей карте, уточняют периоды внутри этих тенденций: <b>где деньги идут легче, а где лучше не брать кредит и не рисковать</b></p>
+    <div class="viz"><div class="viz-h">Тенденции года по периодам</div><div class="months"><div>Янв</div><div>Фев</div><div class="g">Мар</div><div class="g">Апр</div><div>Май</div><div class="h">Июн</div><div class="h">Июл</div><div>Авг</div><div class="g">Сен</div><div class="g">Окт</div><div>Ноя</div><div>Дек</div></div><div class="legend"><span><i style="background:#cfe8d5"></i>легче</span><span><i style="background:#f1cfcf"></i>осторожно</span><span><i style="background:#ece0cf"></i>ровно</span></div><div class="viz-s">Пример. В вашем разборе периоды будут свои</div></div>
+    <div class="case"><span class="case-lbl">Мой пример</span>
+      <p class="case-t">Покажу на себе</p>
+      <p>Этой осенью ретроградный Сатурн идёт по моему 11 дому, это интернет и аудитория. Охваты просели, как у многих. <b>Я знала об этом заранее, поэтому не паниковала, а увеличила количество роликов</b></p>
+      <p>Когда знаешь, откуда трудность, паниковать некогда, ты работаешь</p>
+    </div>
 
     </div><div class="stp stp-3"><img class="stp-img" src="img/st-dni.jpg" alt="">
-    <h3><i>3</i>Ваши денежные дни</h3>
-    <p>Самое точное, что я даю, это дни. Из десятков аспектов и транзитов я выбираю <b>самые сильные даты для продаж, договоров, повышения цены и запусков</b></p>
-    <p>Эту систему я полгода тестировала на себе, на муже с его строительным бизнесом, на знакомых и ученицах: свечи, курсы, рассада на Авито. Свои продажи я ставлю на «жёлтые» денежные дни и вижу разницу</p>
-    <div class="viz"><div class="viz-h">Денежные дни месяца</div><div class="cal"><div class="w">Пн</div><div class="w">Вт</div><div class="w">Ср</div><div class="w">Чт</div><div class="w">Пт</div><div class="w">Сб</div><div class="w">Вс</div><div></div><div></div><div>1</div><div>2</div><div>3</div><div class="m">4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div class="m">11</div><div class="m">12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div class="m">19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div class="m">27</div><div>28</div><div>29</div><div>30</div></div><div class="viz-s">Пример. Золотые даты: продажи, договоры, повышение цены</div></div>
+    <h3><i>3</i>Где подстелить соломки: компенсаторика</h3>
+    <p><b>Компенсаторика</b> это простые действия, которые снижают напряжение трудного периода. Можно подстелить себе соломки и смягчить негативные процессы не только за счёт астрологии, но и за счёт обычной логики. <b>На эту часть разбора клиенты реагируют сильнее всего:</b> прогноз сразу превращается в понятные действия</p>
+    <p>Вот примеры компенсаторики по деньгам из моих разборов:</p>
+    <ul class="ch">
+      <li>кредит в этом году можно, но только на недвижимость</li>
+      <li>кредит на бизнес возможен, если каждая копейка уйдёт в бизнес, а не на покупки</li>
+      <li>тяжёлая планета идёт по зоне ежедневной работы: поменять что-то в работе, пойти за повышением, начать зарабатывать по-другому</li>
+      <li>напряжение по дому и имуществу: заранее сделать ремонт или осмотр машины</li>
+    </ul>
+    <div class="viz"><div class="viz-h">Один и тот же трудный период</div><div class="duo"><div class="l"><b>🌪</b><strong>Без подстраховки</strong>застаёт врасплох и кажется невезением</div><div class="r"><b>🛡</b><strong>С компенсаторикой</strong>вы заранее знаете, где подстелить соломки</div></div><div class="viz-s">Компенсаторика в вашем разборе подбирается под вашу карту</div></div>
+    <p>Денежные дни я тоже рассчитываю, эту систему я полгода проверяла на себе, на муже и на ученицах. Но это дополнение к картине года. <b>Зачем знать отдельные периоды, если не знаешь полный прогноз на год?</b></p>
 
     </div><div class="selfq">
       <div class="selfq-h">Можно ли посмотреть это самой?</div>
       <p>Частично да. Задайте себе три вопроса:</p>
-      <ul class="ch"><li>через какое дело деньги приходили ко мне легче всего?</li><li>в какие месяцы прошлых лет у меня был денежный рывок, а в какие провал?</li><li>в какие дни у меня покупают, а в какие тишина?</li></ul>
-      <p>Это уже подсказка. Но точный ответ на 2027 год требует вашего времени и места рождения, соляра и ручного расчёта десятков транзитов. Здесь и нужна моя работа</p>
+      <ul class="ch"><li>через какое дело деньги приходили ко мне легче всего?</li><li>в какие месяцы прошлых лет у меня был денежный рывок, а в какие провал?</li><li>где в прошлом году деньги утекли и можно ли было подстелить соломки заранее?</li></ul>
+      <p>Это уже подсказка. Но точный ответ на 2027 год требует вашего точного времени и места рождения, соляра и расчёта десятков транзитов. Здесь и нужна моя работа</p>
     </div>
 
     <div class="band-warn"><h3 class="warn">Что будет, если не знать</h3>
     <p><b>Год без карты обычно выглядит так:</b> хорошие периоды проходят мимо, потому что вы о них не знали, а трудные приходят внезапно и кажутся невезением. Вы поднимаете цену в «тихий» месяц и решаете, что цену поднимать нельзя. Берёте кредит в напряжённый период и полгода его отрабатываете</p>
-    <figure class="fig"><img src="img/art-zont.jpg" alt=""></figure>
-    <p class="quote">Мы смотрим погоду не потому, что боимся дождя, а чтобы взять зонт.<small>Денежный год работает так же</small></p>
+    <p><b>Знать свой денежный год заранее значит успеть подстелить себе соломки.</b> Брать кредит только там, где он работает на вас, поднимать цену в сильный период и спокойно готовиться к тихому</p>
     <p class="art-end">Поэтому я собрала все три шага в один разбор «Мой денежный год 2027». Ниже рассказываю, что вы получите и как это проходит ↓</p>
     </div>
   </article>
@@ -195,61 +234,86 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
     <ul class="ch">
       <li>доход «то пусто, то густо», и вы не понимаете, от чего это зависит</li>
       <li>работы всё больше, а денег столько же</li>
-      <li>думаете сменить работу, поднять цену или начать своё дело, но не знаете, когда</li>
+      <li>думаете сменить работу, поднять цену или начать своё дело и хотите понимать, что для этого даёт год</li>
       <li>хотите планировать деньги на год заранее, а не наугад</li>
     </ul>
   </section>
 
   <section class="card gsteps">
     <h2>Что я смотрю в вашей карте</h2>
-    <div class="step"><b>1</b><p><span>Ваша денежная модель</span>Через какие таланты вам проще зарабатывать, какой формат ваш: найм, фриланс или своё дело, и где сидят денежные блоки</p></div>
-    <div class="step"><b>2</b><p><span>Денежная картина 2027 года</span>Главная денежная тема года по соляру, карте вашего личного года, и какие месяцы для денег лёгкие, а какие напряжённые</p></div>
-    <div class="step"><b>3</b><p><span>Компенсаторика</span>Простые действия на трудные периоды, которые снижают напряжение, чтобы период прошёл мягче</p></div>
-    <div class="step"><b>4</b><p><span>Денежные дни</span>Самые сильные даты месяца, когда продавать, подписывать договор, поднимать цену или просить повышение</p></div>
-    <p class="quote">Прогноз не приговор, а карта. Я даю вам даты, периоды и план действий</p>
+    <div class="step"><b>1</b><div><span>Ваш денежный потенциал по натальной карте на всю жизнь</span><p>Это полный состав моей консультации «Путь Звезды»:</p>
+      <ul class="ch sost">
+        <li>формула души: ваши сильные и слабые стороны</li>
+        <li>как включить энергию ваших центральных планет</li>
+        <li>где в жизни могут случаться трудности, а где прячется ваша удача</li>
+        <li>какие хобби принесут вам денежный рост</li>
+        <li>стратегия обращения с деньгами: как распоряжаться ими, чтобы они увеличивались</li>
+        <li>таланты, через которые вы будете зарабатывать</li>
+        <li>денежные блоки и как перевести их в суперсилу</li>
+        <li>индивидуальные действия на активацию денежной энергии</li>
+        <li>ваш формат: найм, фриланс, бизнес или инвестиции</li>
+        <li>список навыков, которые нужны для вашего финансового результата</li>
+        <li>ваши денежные ниши</li>
+        <li>предназначение и миссия</li>
+        <li>как проработать напряжения в карте и увеличить финансовую ёмкость</li>
+      </ul></div></div>
+    <div class="step"><b>2</b><p><span>Денежный 2027 год по соляру</span>Что вообще возможно в деньгах в этом году: главная денежная тема, рост дохода, новые источники или время укрепиться</p></div>
+    <div class="step"><b>3</b><p><span>Периоды по транзитам</span>Тенденции внутри года: где деньги идут легче, а где лучше не брать кредит и не рисковать</p></div>
+    <div class="step"><b>4</b><p><span>Компенсаторика</span>Где подстелить соломки и как смягчить трудные периоды не только астрологией, но и логикой</p></div>
+    <div class="step"><b>5</b><p><span>Денежные дни как дополнение</span>Подсказка поверх картины года, в какой момент удобнее продавать, подписывать договор и поднимать цену</p></div>
   </section>
 
   <section class="card hbands">
     <h2>Как это проходит</h2>
     <div class="step"><b>1</b><p><span>Вы выбираете формат</span>и оплачиваете разбор</p></div>
-    <div class="step"><b>2</b><p><span>Присылаете данные</span>дату, точное время и место рождения и свой главный денежный вопрос на год</p></div>
-    <div class="step"><b>3</b><p><span>Я делаю разбор</span>вручную, по вашей карте</p></div>
-    <div class="step"><b>4</b><p><span>Вы получаете результат</span>и возвращаетесь к нему весь год перед каждым важным денежным шагом</p></div>
+    <div class="step"><b>2</b><p><span>Присылаете данные</span>дату, точное время и место рождения и свой главный денежный вопрос на год. Без точного времени рождения я разбор не делаю</p></div>
+    <div class="step"><b>3</b><p><span>Как готовится разбор</span>Персональный разбор я делаю сама, вручную, по вашей карте и записываю голосом. PDF собирается автоматически по моей методике</p></div>
+    <div class="step"><b>4</b><p><span>Вы получаете результат</span>Персональный: голосовой разбор, текстовый файл и обратная связь в переписке по вопросам к разбору. PDF: файл с денежными тенденциями 2027 года. К результату вы возвращаетесь весь год перед каждым важным денежным шагом</p></div>
   </section>
 
-  <figure class="op"><img src="img/oksana-palto.jpg" alt="Оксана Смирнова"><figcaption><b>«Прогноз не приговор, а карта»</b>я даю даты, периоды и план действий</figcaption></figure>
-  <h2 style="text-align:center;margin-top:26px">Выберите формат</h2>
+  <figure class="op"><img src="img/oksana-palto.jpg" alt="Оксана Смирнова"><figcaption><b>«Прогноз не приговор, а карта»</b>мой разбор это план действий на ваш денежный год</figcaption></figure>
 
-  <section class="tar">
-    <h3>Денежный год 2027 · PDF</h3>
-    <p class="for">Для тех, кто хочет понять свои деньги на год и действовать сам</p>
-    <ul class="ch">
-      <li>ваша денежная модель по карте</li>
-      <li>денежная картина 2027 года</li>
-      <li>советы по каждому месяцу</li>
-      <li class="no">без денежных дней и компенсаторики</li>
-      <li class="no">без личного общения</li>
-    </ul>
-    <div class="price">3 500 ₽</div>
-    <a class="btn ghost" href="https://t.me/okssmi" target="_blank" data-tg="money_pdf" onclick="g('buy_pdf')">Хочу PDF-разбор</a>
+  <section class="card otz">
+    <h2>Что пишут после разбора</h2>
+    <figure><img src="img/otzyv-11.jpg" width="932" height="1280" alt="Отзыв после консультации: заработала в 2 раза больше, чем раньше" loading="lazy"><figcaption>После консультации: «заработала в 2 раза больше, чем раньше»</figcaption></figure>
+    <figure><img src="img/otzyv-9.jpg" width="1080" height="969" alt="Голосовой разбор 45:23 и текстовый файл, ответ клиентки" loading="lazy"><figcaption>Голосовой разбор на 45 минут и текстовый файл, ответ клиентки после них</figcaption></figure>
+    <figure><img src="img/otzyv-4.jpg" width="590" height="909" alt="Голосовой отзыв после финансового разбора, клиентке захотелось подарить такой же разбор друзьям" loading="lazy"><figcaption>Отзыв после финансового разбора. В конце клиентка пишет, что ей захотелось подарить такой же разбор друзьям</figcaption></figure>
   </section>
+
+  <h2 id="tarify" style="text-align:center;margin-top:26px;scroll-margin-top:16px">Выберите формат</h2>
+  <div class="fmt3">
+    <table class="t3">
+      <tr><th></th><th>PDF</th><th>Прогноз на год</th><th>Денежный год</th></tr>
+      <tr class="pr"><td>Цена</td><td>3 990 ₽</td><td>7 990 ₽</td><td>13 990 ₽</td></tr>
+      <tr><td>Все сферы 2027 года</td><td>✅</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Периоды и компенсаторика</td><td>✅<br>кратко</td><td>✅<br>подробно</td><td>✅<br>подробно</td></tr>
+      <tr><td>Голосовой разбор и обратная связь</td><td>❌</td><td>✅</td><td>✅</td></tr>
+      <tr><td>Разбор по натальной карте на всю жизнь: таланты, денежные блоки, ваша сфера и формат работы, предназначение</td><td>❌</td><td>❌</td><td>✅</td></tr>
+      <tr><td>Трекер «Дорога 2027» и денежные бонусы</td><td>❌</td><td>❌</td><td>✅</td></tr>
+      <tr class="sum"><td>Итого</td><td>картина года в файле</td><td>одна консультация: год</td><td>две консультации: год и деньги на всю жизнь</td></tr>
+    </table>
+  </div>
+
 
   <section class="tar top">
     <div class="badge">Персональный разбор</div>
-    <h3>Денежный год 2027 · лично со мной</h3>
-    <p class="for">Для тех, кто хочет не просто знать, а пройти год по плану</p>
+    <h3>Мой денежный год 2027 · лично со мной</h3>
+    <p class="for"><b>Самый полный формат, две мои консультации в одной:</b> ваш денежный потенциал по натальной карте на всю жизнь + полный прогноз на 2027 год по всем сферам. Вы уходите с пониманием, как развиваться по жизни и куда идти в этом году. Делаю сама</p>
     <ul class="ch">
-      <li>всё из PDF-разбора</li>
-      <li>денежные дни на каждый месяц 2027 года</li>
-      <li>компенсирующие действия на напряжённые периоды</li>
-      <li>путь по важным датам: когда действовать, а когда подождать</li>
-      <li>личный созвон со мной</li>
-      <li><b>личный трекер «Дорога 2027»</b> по важным датам и периодам</li>
+      <li><b>разбор по натальной карте на всю жизнь («Путь Звезды»):</b> ваши таланты и на чём вам зарабатывать, ваши денежные блоки, сферы, в которых вам развиваться, формат работы, который вам подходит, куда двигаться и ваше предназначение. Это не прогноз, он действует всю жизнь</li>
+      <li><b>полный прогноз на 2027 год по всем сферам:</b> деньги, работа, любовь, семья и дом, дети, здоровье</li>
+      <li><b>деньги глубже всего:</b> денежная тема года по соляру и периоды, когда действовать, а где подстраховаться</li>
+      <li>компенсаторика на напряжённые периоды</li>
+      <li>денежные дни на каждый месяц как дополнение к картине года</li>
+      <li>голосовые файлы, PDF и обратная связь в переписке по вопросам к разбору, без созвона</li>
+      <li><b>личный трекер «Дорога 2027»</b> по периодам года</li>
+      <li>нужны дата, точное время и место рождения, без точного времени разбор не делаю</li>
     </ul>
 
     <div class="trk">
       <div class="trk-h">Так выглядит ваш трекер</div>
-      <p class="trk-s">Ваш год как дорога. На ней ваши денежные дни и периоды. Нажимаете на точку и видите, что делать, а прожитое отмечаете галочкой</p>
+      <p class="trk-s">Ваш год как дорога. На ней периоды года и <b>конкретные шаги, что в них сделать</b>. Нажимаете на точку, видите шаги и отмечаете сделанное. Так видно, что год идёт по плану</p>
+      <div class="trk-prog" id="trkProg"></div>
       <div class="trk-road">
         <button class="tp" style="left:47%;top:84%" data-i="0"><span>Янв</span></button>
         <button class="tp" style="left:50%;top:56%" data-i="1"><span>Мар</span></button>
@@ -258,73 +322,79 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
         <button class="tp" style="left:76%;top:13%" data-i="4"><span>Дек</span></button>
       </div>
       <div class="trk-card" id="trkCard"></div>
-      <p class="trk-note">Пример. В вашем трекере будут ваши даты и периоды по вашей карте</p>
+      <p class="trk-note">Пример. В вашем трекере будут ваши периоды по вашей карте</p>
     </div>
 
     <div class="bon">
       <div class="bon-h">🎁 Подарки к разбору</div>
-      <div class="bi"><b>📅</b><p><span>Денежные дни в календаре телефона</span>Даты сами встают в ваш календарь, и утром приходит напоминание: «сегодня сильный день для продаж»</p></div>
+      <div class="bi"><b>📅</b><p><span>Денежные дни в календаре телефона</span>Дополнение к разбору: сильные дни сами встают в ваш календарь, и утром приходит напоминание</p></div>
       <div class="bi"><b>🌙</b><p><span>Денежные практики на каждое новолуние 2027</span>12 коротких практик, чтобы каждый месяц начинать с намерения про деньги</p></div>
-      <div class="bi"><b>📝</b><p><span>Шпаргалка «Перед большой тратой или договором»</span>Короткий список: когда подписывать, а когда лучше подождать</p></div>
-      <div class="bi"><b>🔒</b><p><span>Цена 2028 года сохраняется</span>Через год получите денежный год 2028 по нынешней цене</p></div>
-      <div class="bi"><b>🎁</b><p><span>Подарок близкому на Новый год</span>Такой же разбор за 7 500 ₽. Сразу после оплаты вы впишете имя, и мы соберём красивый сертификат, который можно отправить ссылкой</p></div>
+      <div class="bi"><b>📝</b><p><span>Шпаргалка «Перед большой тратой или договором»</span>Короткий список: что проверить перед подписанием и где лучше подстраховаться</p></div>
     </div>
 
-    <div class="price-lbl">Цена в первые 24 часа</div><div class="price" id="pTop">9 990 ₽<s>12 000 ₽</s></div>
-    <div class="timer" id="timer">⏰ Только 24 часа</div>
-    <a class="btn" href="https://t.me/okssmi" target="_blank" data-tg="money_full" onclick="g('buy_full')">Хочу персональный разбор</a>
+    <div class="price">13 990 ₽</div>
+    <a class="btn" href="https://t.me/okssmi" target="_blank" data-tg="money_full" onclick="g('buy_full')">Хочу «Мой денежный год 2027»</a>
+    <p class="upsell">Нужен только прогноз на год, без разбора натальной карты? <a href="year.html">Прогноз на 2027 год лично со мной</a> · 7 990 ₽</p>
+  </section>
+
+  <section class="tar">
+    <h3>PDF-прогноз на весь 2027 год</h3>
+    <p class="for">Все сферы года в одном файле, без моего личного разбора</p>
+    <ul class="ch">
+      <li><b>все сферы года:</b> деньги, работа, любовь, семья и дом, дети, здоровье</li>
+      <li><b>главные периоды года:</b> когда действовать, а когда подстраховаться</li>
+      <li><b>компенсаторика:</b> что делать в трудные периоды</li>
+      <li><b>составляется компьютерной программой</b> по вашим данным и по моей методике: соляр, транзиты, компенсаторика</li>
+      <li><b>кратко, ёмко и по полочкам:</b> весь год в одном файле</li>
+      <li><b>быстро и недорого</b> по сравнению с личной консультацией</li>
+      <li>нужны дата, точное время и место рождения, без точного времени файл не собирается</li>
+      <li class="no">без моего голосового разбора и обратной связи</li>
+    </ul>
+    <p class="bridge">PDF показывает главные тенденции денег на год. Если впереди большое решение или нужен ответ на ваш вопрос, выбирайте персональный разбор</p>
+    <div class="price">3 990 ₽</div>
+    <a class="btn ghost" href="https://t.me/okssmi" target="_blank" data-tg="money_pdf" onclick="g('buy_pdf')">Хочу PDF на 2027 год</a>
   </section>
 
   <a class="back" href="index.html">← Вернуться к моей кармической задаче 2027</a>
 </div>
 <script>
+var PRICES = {pdf:'3 990 ₽', year:'7 990 ₽', money:'13 990 ₽'};
 if('scrollRestoration' in history) history.scrollRestoration = 'manual'; window.addEventListener('load', function(){ window.scrollTo(0,0); });
 function g(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n) }catch(e){} return true; }
 (function(){
   var D = [
-    ['Январь · старт года','Практика запуска года и главная денежная тема 2027. Ставим цель по доходу на год'],
-    ['Март · сильные денежные дни','Хорошее время поднять цену и запустить продажи. Даты в вашем календаре отмечены'],
-    ['Июнь · напряжённый период','Не брать новые кредиты на эмоциях. Компенсаторика: пересмотреть траты и закрыть старые долги'],
-    ['Сентябрь · окно для роста','Время просить повышение или предлагать большой проект. Денежные дни отмечены'],
-    ['Декабрь · итоги года','Подводим итоги и готовим денежный план на 2028']
+    ['Январь · старт года','Главная денежная тема 2027 и цель на год',['Сделать практику запуска года','Записать цель по доходу на 2027']],
+    ['Март · сильный денежный период','Хорошее время для роста дохода',['Пересмотреть свои цены','Запустить продажи или предложить услугу']],
+    ['Июнь · напряжённый период','Здесь важнее сохранить, чем рисковать',['Не брать новые кредиты на эмоциях','Пересмотреть траты и закрыть старые долги']],
+    ['Сентябрь · окно для роста','Время для больших шагов в работе',['Попросить повышение или предложить большой проект']],
+    ['Декабрь · итоги года','Подводим итоги и смотрим вперёд',['Подвести денежные итоги года','Составить денежный план на 2028']]
   ];
-  var pts = document.querySelectorAll('.tp'), card = document.getElementById('trkCard'), done = {};
+  var pts = document.querySelectorAll('.tp'), card = document.getElementById('trkCard'), prog = document.getElementById('trkProg'), done = {};
+  var total = D.reduce(function(n, d){ return n + d[2].length; }, 0);
+  function cnt(i){ var c = 0; D[i][2].forEach(function(_, j){ if(done[i + '-' + j]) c++; }); return c; }
+  function upd(){
+    var all = 0; D.forEach(function(_, i){ var c = cnt(i); all += c; pts[i].classList.toggle('done', c === D[i][2].length); });
+    prog.innerHTML = '<i style="width:' + Math.round(all / total * 100) + '%"></i><span>Сделано шагов года: <b>' + all + ' из ' + total + '</b></span>';
+  }
   function show(i){
-    pts.forEach(function(p){ p.classList.toggle('act', +p.dataset.i === i && !done[i]); });
-    card.innerHTML = '<b>' + D[i][0] + '</b>' + D[i][1] + '<label><input type="checkbox" ' + (done[i] ? 'checked' : '') + '> Прожила этот период</label>';
-    card.querySelector('input').onchange = function(e){ done[i] = e.target.checked; pts[i].classList.toggle('done', done[i]); pts[i].classList.remove('act'); };
+    pts.forEach(function(p){ p.classList.toggle('act', +p.dataset.i === i); });
+    card.innerHTML = '<b>' + D[i][0] + '</b>' + D[i][1] + '<div class="trk-do">Что сделать в этот период:</div>' +
+      D[i][2].map(function(t, j){ return '<label><input type="checkbox" data-k="' + i + '-' + j + '" ' + (done[i + '-' + j] ? 'checked' : '') + '> ' + t + '</label>'; }).join('');
+    card.querySelectorAll('input').forEach(function(inp){ inp.onchange = function(e){ done[e.target.getAttribute('data-k')] = e.target.checked; upd(); }; });
   }
   pts.forEach(function(p){ p.onclick = function(){ show(+p.dataset.i); }; });
-  show(0);
+  show(0); upd();
 })();
 (function(){
-  var KEY = 'karma27_start', LEN = 24*3600*1000, start;
-  try{ start = +localStorage.getItem(KEY); if(!start){ start = Date.now(); localStorage.setItem(KEY, start); } }catch(e){ start = Date.now(); }
-  var t = document.getElementById('timer'), p = document.getElementById('pTop');
-  function pad(n){ return (n < 10 ? '0' : '') + n; }
-  function tick(){
-    var left = start + LEN - Date.now();
-    if(left <= 0){ p.innerHTML = '12 000 ₽'; t.textContent = 'Время спеццены вышло'; var pl = document.querySelector('.price-lbl'); if(pl) pl.style.display = 'none'; return; }
-    var h = Math.floor(left/3600000), m = Math.floor(left%3600000/60000), s = Math.floor(left%60000/1000);
-    t.innerHTML = '⏰ Цена 9 990 ₽ только 24 часа. Осталось<b>' + pad(h) + ':' + pad(m) + ':' + pad(s) + '</b>';
-    setTimeout(tick, 1000);
-  }
-  tick();
 })();
 </script>
 <script>
 (function(){
   var U = 'https://t.me/okssmi?text=';
-  var late = function(){ var st = 0; try{ st = +localStorage.getItem('karma27_start'); }catch(e){} return st && Date.now() - st > 24*3600*1000; };
-  var SPH = {career:'карьера и бизнес', love:'отношения', health:'здоровье и силы'};
-  var sp = new URLSearchParams(location.search).get('s');
   function msg(k){
-    var full = late() ? '12 000 ₽' : 'спеццене 9 990 ₽';
     return {
-      money_pdf: 'Здравствуйте, Оксана! Хочу «Денежный год 2027» в формате PDF за 3 500 ₽',
-      money_full: 'Здравствуйте, Оксана! Хочу персональный разбор «Денежный год 2027» лично с вами по ' + full,
-      year_pdf: 'Здравствуйте, Оксана! Хочу PDF-прогноз на 2027 год по сфере: ' + (SPH[sp] || 'напишу какой') + ', 3 500 ₽',
-      year_full: 'Здравствуйте, Оксана! Хочу прогноз на весь 2027 год лично с вами по ' + full
+      money_pdf: 'Здравствуйте, Оксана! Хочу PDF-прогноз на весь 2027 год, ' + PRICES.pdf,
+      money_full: 'Здравствуйте, Оксана! Хочу «Мой денежный год 2027» лично с вами, ' + PRICES.money
     }[k];
   }
   document.querySelectorAll('a[data-tg]').forEach(function(a){
@@ -334,5 +404,7 @@ function g(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n)
   });
 })();
 </script>
+<a class="to-price" id="toPrice" href="#tarify">Мой денежный год 2027 ↓</a>
+<script>(function(){var b=document.getElementById('toPrice'),t=document.getElementById('tarify');if(!b||!t)return;var seen=false;function upd(){var r=t.getBoundingClientRect(),past=window.scrollY>window.innerHeight*0.6;b.classList.toggle('on',past&&!seen&&r.top>window.innerHeight*0.5)}if('IntersectionObserver' in window){new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)seen=true;else if(x.boundingClientRect.top>0)seen=false});upd()},{threshold:0}).observe(t.parentNode.querySelector('.tar')||t)}window.addEventListener('scroll',upd,{passive:true});upd();b.addEventListener('click',function(ev){ev.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})})})();</script>
 </body>
 </html>
