@@ -117,6 +117,7 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
 .moon-alt{font-size:13px;color:var(--mut);margin-top:8px}.moon-btns{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:6px}
 .moon-btns button{font:600 13px Manrope,sans-serif;padding:8px 12px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--wine);cursor:pointer}.moon-btns button.on{background:var(--wine);color:#fff}
 .otz img{width:100%;height:auto;border-radius:12px}.otz figcaption{font-size:13px;color:var(--mut);margin-top:4px}
+.btn.tgback{display:block;text-align:center;text-decoration:none;margin-top:10px;background:#fff;color:#229ed9;border:1.5px solid #229ed9;box-shadow:none}
 .date-err{color:var(--wine);font-size:14px;text-align:center;margin-top:8px}
 </style>
 </head>
@@ -149,12 +150,26 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
 
 <div class="wrap" id="res" hidden></div>
 
+<!-- Яндекс Метрика: счётчик «Кармическая задача 2027 Оксана» -->
+<script>window.YM_ID = 113789141;</script>
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(113789141, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113789141" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 <script src="astronomy.browser.min.js"></script>
 <script src="karma.js"></script>
 <script>
 (function(){
   var K = window.KARMA;
   var TG = 'https://t.me/okssmi';
+  var TG_POST = 'https://t.me/okssmi2';  // пост канала про кармическую задачу 2027: заменить на ссылку поста, когда он выйдет
+  var TGBTN = '<a class="btn tgback" href="' + TG_POST + '" target="_blank" rel="noopener" onclick="window.__tg()">✈️ Вернуться в Telegram-канал</a>';
+  window.__tg = function(){ goal('tg_back'); };
   function goal(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n) }catch(e){} }
   var LANDING = {money: 'money.html', year: 'year.html'};
   var SELF = {
@@ -195,13 +210,13 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
       if(id === 'health') h += '<h4>Здоровье</h4>' + B.places.health + '<p class="doc-line">' + B.doc + '</p><h4>Энергия</h4>' + B.places.energy;
       else h += B.places[id];
       h += '<p class="frame">' + B.frame[id] + '</p>';
-      h += '<div class="paid"><p class="lead">' + c.lead + '</p><ol class="pts">' + c.pts.map(function(t){return '<li>' + t + '</li>'}).join('') + '</ol><p class="hl">' + c.hl + '</p><a class="btn" href="' + LANDING[prod] + (prod === 'year' ? '?s=' + id : '') + '" onclick="return window.__g(\'' + prod + '\')">' + c.btn + '</a>' + (c.alt ? '<a class="btn ghost" href="' + LANDING.year + '" onclick="return window.__g(\'year\')">' + c.alt + '</a>' : '') + '</div>';
+      h += '<div class="paid"><p class="lead">' + c.lead + '</p><ol class="pts">' + c.pts.map(function(t){return '<li>' + t + '</li>'}).join('') + '</ol><p class="hl">' + c.hl + '</p><a class="btn" href="' + LANDING[prod] + (prod === 'year' ? '?s=' + id : '') + '" onclick="return window.__g(\'' + prod + '\')">' + c.btn + '</a>' + (c.alt ? '<a class="btn ghost" href="' + LANDING.year + '" onclick="return window.__g(\'year\')">' + c.alt + '</a>' : '') + TGBTN + '</div>';
       var nx = ORDER[i+1];
       h += '<a class="nextv" href="' + (nx ? '#s-' + nx[0] : '#road') + '">' + (nx ? 'Следующая веха: ' + nx[1] + ' →' : '↑ Наверх') + '</a></section>';
     });
     h += '<section class="card offer" id="offer" hidden><img src="img/oksana-kniga.jpg" alt="Оксана Смирнова"><div class="kick">Что дальше</div><h3>' + hi + 'ваш 2027 можно прожить по плану</h3>';
     h += '<p>Вы увидели свою задачу года. А что 2027 год принесёт в каждой сфере, видно по точному времени и месту рождения: что в вашем году меняется, что остаётся стабильным и где подстраховаться. Компенсаторика подскажет, как подстелить себе соломки на трудные периоды</p>';
-    h += '<a class="btn" href="' + LANDING.year + '" onclick="return window.__g(\'year\')">Прогноз на 2027 год по всем сферам</a><a class="btn ghost" href="' + LANDING.money + '" onclick="return window.__g(\'money\')">Мой денежный год 2027</a>';
+    h += '<a class="btn" href="' + LANDING.year + '" onclick="return window.__g(\'year\')">Прогноз на 2027 год по всем сферам</a><a class="btn ghost" href="' + LANDING.money + '" onclick="return window.__g(\'money\')">Мой денежный год 2027</a>' + TGBTN;
     h += '</section>';
     var res = document.getElementById('res'); res.innerHTML = h.replace(/\.((?:<\/span>)*)\s*<\/(p|div)>/g, '$1</$2>').replace(/></g, '> <'); res.hidden = false;  // без точки в конце абзаца
   }
@@ -212,7 +227,7 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
   document.getElementById('f').addEventListener('submit', function(){
     var dd = +selD.value, mm = +selM.value, yy = +selY.value, err = document.getElementById('dErr');
     if(!dd || !mm || !yy){ (!dd ? selD : !mm ? selM : selY).focus(); return; }
-    if(dd > new Date(Date.UTC(yy, mm, 0)).getUTCDate()){ selD.setAttribute('aria-invalid', 'true'); err.hidden = false; selD.focus(); return; }
+    if(dd > new Date(Date.UTC(yy, mm, 0)).getUTCDate()){ selD.setAttribute('aria-invalid', 'true'); err.hidden = false; selD.focus(); goal('form_error'); return; }
     selD.removeAttribute('aria-invalid'); err.hidden = true;
     cur = K.calc(yy, mm, dd); render(cur);
     var TEASE = {task:'Ваша кармическая задача на 2027 год', money:'Как выйти на новый уровень дохода', career:'Пора ли менять работу', love:'Кто войдёт в вашу жизнь', health:'Куда утекают ваши силы и энергия'};
@@ -233,6 +248,7 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
   if(q.get('d')){ var qd = q.get('d').split('-'); selY.value = +qd[0]; selM.value = +qd[1]; selD.value = +qd[2]; document.getElementById('f').dispatchEvent(new Event('submit')); }
   function openS(id){
     var el = document.getElementById(id); if(!el) return;
+    goal('open_' + id.slice(2));
     document.querySelectorAll('.sph-x').forEach(function(x){ x.hidden = (x.id !== id); });
     var y = el.getBoundingClientRect().top + window.scrollY - 10;
     window.scrollTo({top:y, behavior:'smooth'});
@@ -243,6 +259,14 @@ details{margin-top:8px}summary{cursor:pointer;color:var(--wine);font-weight:700}
     if(/^s-(money|career|love|health)$/.test(id)){ e.preventDefault(); openS(id); }
     else if(id === 'road' || id === 's-task'){ e.preventDefault(); var t = document.getElementById(id); window.scrollTo({top: t.getBoundingClientRect().top + window.scrollY - (id==='road'?100:10), behavior:'smooth'}); }
   });
+  /* Цели досмотра: своя задача и блок с продуктом, каждая один раз за визит */
+  var seen = {};
+  function seeCheck(){
+    var edge = window.innerHeight * 0.6;
+    [['s-task','see_task']].forEach(function(s){ var el = document.getElementById(s[0]); if(el && !seen[s[1]] && el.getBoundingClientRect().top < edge){ seen[s[1]] = 1; goal(s[1]); } });
+    if(!seen.see_paid) document.querySelectorAll('.sph-x:not([hidden]) .paid, #offer:not([hidden])').forEach(function(el){ if(!seen.see_paid && el.getBoundingClientRect().top < edge){ seen.see_paid = 1; goal('see_paid'); } });
+  }
+  window.addEventListener('scroll', function(){ if(!document.getElementById('res').hidden) seeCheck(); }, {passive:true});
   window.__g = function(p){ goal(p === 'money' ? 'click_money' : 'click_year'); return true; };
 })();
 </script>
