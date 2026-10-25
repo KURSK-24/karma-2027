@@ -360,7 +360,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 <script>
 var PRICES = {pdf:'3 990 ₽', year:'7 990 ₽', money:'13 990 ₽'};
 if('scrollRestoration' in history) history.scrollRestoration = 'manual'; window.addEventListener('load', function(){ window.scrollTo(0,0); });
-function g(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n) }catch(e){} return true; }
+function g(n){ try{ if(window.ym && window.YM_ID){ ym(window.YM_ID,'reachGoal',n); if(/^buy_/.test(n)) ym(window.YM_ID,'reachGoal','buy_click'); } }catch(e){} return true; }
 (function(){
   var D = [
     ['Январь · старт года','Главная денежная тема 2027 и цель на год',['Сделать практику запуска года','Записать цель по доходу на 2027']],
@@ -406,5 +406,16 @@ function g(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n)
 </script>
 <a class="to-price" id="toPrice" href="#tarify">Мой денежный год 2027 ↓</a>
 <script>(function(){var b=document.getElementById('toPrice'),t=document.getElementById('tarify');if(!b||!t)return;var seen=false;function upd(){var r=t.getBoundingClientRect(),past=window.scrollY>window.innerHeight*0.6;b.classList.toggle('on',past&&!seen&&r.top>window.innerHeight*0.5)}if('IntersectionObserver' in window){new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)seen=true;else if(x.boundingClientRect.top>0)seen=false});upd()},{threshold:0}).observe(t.parentNode.querySelector('.tar')||t)}window.addEventListener('scroll',upd,{passive:true});upd();b.addEventListener('click',function(ev){ev.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})})})();</script>
+<!-- Яндекс Метрика: счётчик «Кармическая задача 2027 Оксана» -->
+<script>window.YM_ID = 113789141;</script>
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(113789141, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/113789141" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 </body>
 </html>
