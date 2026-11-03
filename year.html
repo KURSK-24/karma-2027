@@ -148,15 +148,34 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 .pnote{background:var(--cream);border-radius:10px;padding:10px 12px;font-size:14.5px;margin:0 0 10px}
 .pgrp{font-weight:800;color:var(--wine);margin:14px 0 2px}
 .upsell{background:var(--cream);border-radius:12px;padding:12px 14px;font-size:14.5px;margin:12px 0 0}.upsell a{color:var(--wine);font-weight:700}
-.fmt3{margin:6px 0 16px}
-.t3{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0;font-size:11.5px;overflow-wrap:anywhere;hyphens:auto;line-height:1.35;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.t3 th{background:var(--wine);color:#fff;font-weight:800;padding:8px 3px;font-size:11px;vertical-align:bottom}
-.t3 th:last-child{background:linear-gradient(135deg,#b8862f,#e9c47a 50%,#b07a25);color:#4a2c05}
-.t3 td{padding:7px 3px;border-top:1px solid var(--line);text-align:center;vertical-align:top}
-.t3 th:first-child,.t3 td:first-child{width:31%}.t3 td:first-child{text-align:left;font-weight:600;padding-left:7px}
-.t3 td:last-child{background:#fbf1e1}
-.t3 tr.pr td{font-family:Montserrat,sans-serif;font-weight:900;color:var(--wine);font-size:12px;white-space:nowrap}
-.t3 tr.sum td{font-weight:700;color:var(--wine)}
+
+/* Три формата: одна сфера, все сферы, личный разбор */
+.format-intro{text-align:center;color:var(--mut);margin:0 0 20px;font-size:15px}
+.tar{margin:20px 0;padding:20px;border-radius:22px;scroll-margin-top:20px}
+.tar-head{margin-bottom:16px}
+.tar-label{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--wine);margin-bottom:10px}
+.tar h3{font-size:21px;line-height:1.15;margin:0 0 8px;overflow-wrap:break-word}
+.tar .for{font-size:15px;line-height:1.5;margin:0}
+.tar .price{font-size:34px;line-height:1.1;margin:16px 0 4px}
+.price-unit{font-size:13px;color:var(--mut)}
+.tar-one{background:#fff;border:1.5px solid #d9c9c3;box-shadow:0 6px 20px rgba(125,29,51,.04)}
+.tar-one .tar-label{background:var(--cream);border-radius:8px;padding:5px 9px}
+.tar-all{background:linear-gradient(145deg,#fbf6fb,#eef3f8);border:1.5px solid #c5bdcf;border-top:5px solid var(--wine)}
+.tar-all .tar-label{background:#fff;border-radius:8px;padding:5px 9px}
+.tar.top{background:linear-gradient(160deg,#fffaf0,#fbeccc);border:2px solid var(--gold);box-shadow:0 12px 32px rgba(125,29,51,.12)}
+.tar-personal .tar-head{background:linear-gradient(145deg,var(--wine2),var(--wine));margin:-20px -20px 18px;padding:22px 20px;border-radius:20px 20px 0 0}
+.tar-personal .tar-label{color:#f6d99a}
+.tar-personal .tar-head h3,.tar-personal .tar-head .for{color:#fff}
+.tar-personal .tar-head .price{color:#f6d99a}
+.tar-personal .tar-head .price-unit{color:#fbe4d0}
+.tar-personal>.btn{background:linear-gradient(135deg,#e2bb70,#f6dfa2 45%,#cf9e43);color:#4a2c05;box-shadow:0 8px 22px rgba(176,122,37,.25)}
+.tar-limit,.tar-data{font-size:14px;line-height:1.5;margin:12px 0;color:var(--mut)}
+.tar-limit{border-top:1px solid var(--line);padding-top:12px}
+.tar-data b{color:var(--txt)}
+.tar .order-note{font-size:14px;text-align:left;line-height:1.5;padding:12px;border-radius:12px;background:var(--cream);color:var(--txt);margin-top:12px}
+.order-note b{display:block;color:var(--wine);margin-bottom:4px}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+@media(max-width:359px){.tar{padding:16px}.tar h3{font-size:19px}.tar-personal .tar-head{margin:-16px -16px 16px;padding:20px 16px}.tar .btn{padding:14px 10px;font-size:15px}}
 </style>
 </head>
 <body>
@@ -285,44 +304,56 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
   </section>
 
   <h2 id="tarify" style="text-align:center;margin-top:26px;scroll-margin-top:16px">Выберите формат</h2>
-  <div class="fmt3">
-    <table class="t3">
-      <tr><th></th><th>PDF</th><th>Прогноз на год</th><th>Денежный год</th></tr>
-      <tr class="pr"><td>Цена</td><td>3 990 ₽</td><td>7 990 ₽</td><td>13 990 ₽</td></tr>
-      <tr><td>Все сферы 2027 года</td><td>✅</td><td>✅</td><td>✅</td></tr>
-      <tr><td>Периоды и компенсаторика</td><td>✅<br>кратко</td><td>✅<br>подробно</td><td>✅<br>подробно</td></tr>
-      <tr><td>Голосовой разбор и обратная связь</td><td>❌</td><td>✅</td><td>✅</td></tr>
-      <tr><td>Разбор по натальной карте на всю жизнь: таланты, денежные блоки, ваша сфера и формат работы, предназначение</td><td>❌</td><td>❌</td><td>✅</td></tr>
-      <tr><td>Трекер «Дорога 2027» и денежные бонусы</td><td>❌</td><td>❌</td><td>✅</td></tr>
-      <tr class="sum"><td>Итого</td><td>картина года в файле</td><td>одна консультация: год</td><td>две консультации: год и деньги на всю жизнь</td></tr>
-    </table>
-  </div>
+  <p class="format-intro">Одна сфера, все сферы или личный разбор Оксаны</p>
 
+  <section class="tar tar-one" id="tariff-one" aria-labelledby="one-title">
+    <div class="tar-head">
+      <span class="tar-label">01 · PDF по одной сфере</span>
+      <h3 id="one-title">Одна сфера на 2027 год</h3>
+      <p class="for">Выберите тему, которая волнует вас больше всего</p>
+      <div class="price">990 ₽</div>
+      <p class="price-unit">за одну выбранную сферу на год</p>
+    </div>
+    <ul class="ch">
+      <li>главные тенденции 2027 года в выбранной сфере</li>
+      <li>важные периоды: когда действовать активнее и когда подстраховаться</li>
+      <li>краткие рекомендации по выбранной теме</li>
+    </ul>
+    <p class="tar-limit"><b>В PDF входит только одна сфера.</b> Остальные сферы, голосовой разбор Оксаны и обратная связь не включены</p>
+    <p class="tar-data">Файл составляется программой по вашим данным и моей методике. <b>Нужны дата, точное время и место рождения</b></p>
+    <a class="btn ghost" href="https://t.me/okssmi" target="_blank" rel="noopener" data-tg="year_one" onclick="g('buy_sphere')">Заказать одну сферу · 990 ₽</a>
+    <p class="tg-note order-note"><b>Как заказать</b>Нажмите кнопку, и откроется чат с Оксаной с готовым сообщением. Впишите сферу, которую хотите разобрать больше всего, и нажмите «Отправить» в Telegram</p>
+  </section>
 
-  <section class="tar">
-    <h3 id="tA">PDF-прогноз на весь 2027 год</h3>
-    <p class="for">Все сферы года в одном файле, без моего личного разбора</p>
+  <section class="tar tar-all" id="tariff-all" aria-labelledby="all-title">
+    <div class="tar-head">
+      <span class="tar-label">02 · PDF по всем сферам</span>
+      <h3 id="all-title">Все сферы на 2027 год</h3>
+      <p class="for">Полная картина года в одном PDF-файле</p>
+      <div class="price">3 990 ₽</div>
+      <p class="price-unit">за все сферы года</p>
+    </div>
     <ul class="ch">
       <li><b>все сферы года:</b> деньги, работа, любовь, семья и дом, дети, здоровье</li>
       <li><b>главные периоды года:</b> когда действовать, а когда подстраховаться</li>
       <li><b>компенсаторика:</b> что делать в трудные периоды</li>
-      <li><b>составляется компьютерной программой</b> по вашим данным и по моей методике: соляр, транзиты, компенсаторика</li>
-      <li><b>кратко, ёмко и по полочкам:</b> весь год в одном файле</li>
-      <li><b>быстро и недорого</b> по сравнению с личной консультацией</li>
-      <li>нужны дата, точное время и место рождения, без точного времени файл не собирается</li>
-      <li class="no">без моего голосового разбора и обратной связи</li>
+      <li><b>кратко и по полочкам:</b> весь год в одном файле</li>
     </ul>
-    <div class="price">3 990 ₽</div>
-    <a class="btn" href="https://t.me/okssmi" target="_blank" data-tg="year_pdf" onclick="g('buy_pdf')">Хочу PDF на 2027 год</a>
-    <div class="tg-note">💬 Откроется чат с Оксаной, сообщение уже написано, останется нажать «Отправить»</div>
+    <p class="tar-limit">Без моего голосового разбора и обратной связи</p>
+    <p class="tar-data">Файл составляется программой по вашим данным и моей методике: соляр, транзиты, компенсаторика. <b>Нужны дата, точное время и место рождения</b></p>
+    <a class="btn" href="https://t.me/okssmi" target="_blank" rel="noopener" data-tg="year_pdf" onclick="g('buy_pdf')">Заказать все сферы · 3 990 ₽</a>
   </section>
 
   <div class="upsell" style="margin:18px 0 4px;text-align:center"><b style="display:block;font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:16px;margin-bottom:6px">Хотите усилить PDF личным разбором? 👇</b>PDF покажет главные периоды и тенденции 2027 года. В личном прогнозе я сама разбираю вашу карту по всем сферам, голосом 40-60 минут, и отвечаю на ваши вопросы к разбору. Особенно если впереди большое решение и важно понять, когда действовать</div>
 
-  <section class="tar top">
-    <div class="badge">Персональный разбор</div>
-    <h3>Прогноз на весь 2027 год · лично со мной</h3>
-    <p class="for">Все сферы года. Разбор делаю сама, голосом, по вашей карте</p>
+  <section class="tar top tar-personal" id="tariff-personal">
+    <div class="tar-head">
+      <span class="tar-label">03 · Лично с Оксаной</span>
+      <h3>Прогноз на 2027 год</h3>
+      <p class="for">Все сферы года, голосовой разбор и ответы на ваши вопросы</p>
+      <div class="price">7 990 ₽</div>
+      <p class="price-unit">персональный разбор по вашей карте</p>
+    </div>
     <ul class="ch">
       <li>главная тема и главные проверки года по соляру: что вообще возможно в 2027</li>
       <li>все сферы: деньги, работа, любовь, семья и дом, дети, здоровье</li>
@@ -332,7 +363,6 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
       <li>обратная связь в переписке по вопросам к разбору</li>
       <li>нужны дата, точное время и место рождения, без точного времени прогноз не делаю</li>
     </ul>
-    <div class="price">7 990 ₽</div>
     <a class="btn" href="https://t.me/okssmi" target="_blank" data-tg="year_full" onclick="g('buy_year')">Хочу прогноз на весь 2027 год</a>
     <p class="upsell">Хотите ещё и разбор своего денежного потенциала по натальной карте на всю жизнь? Это <a href="money.html">«Мой денежный год 2027»</a>, в нём уже есть этот полный прогноз · 13 990 ₽</p>
   </section>
@@ -340,12 +370,16 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
   <a class="back" href="index.html">← Вернуться к моей кармической задаче 2027</a>
 </div>
 <script>
-var PRICES = {pdf:'3 990 ₽', year:'7 990 ₽', money:'13 990 ₽'};
+var PRICES = {sphere:'990 ₽', pdf:'3 990 ₽', year:'7 990 ₽', money:'13 990 ₽'};
 function g(n){ try{ if(window.ym && window.YM_ID){ ym(window.YM_ID,'reachGoal',n); if(/^buy_/.test(n)) ym(window.YM_ID,'reachGoal','buy_click'); } }catch(e){} return true; }
 (function(){
   var NAMES = {career:'Карьера и бизнес', love:'Отношения', health:'Здоровье и силы'};
   var k = new URLSearchParams(location.search).get('s') || location.hash.replace('#','');
-  if('scrollRestoration' in history) history.scrollRestoration = 'manual'; window.scrollTo(0,0);
+  if('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  window.addEventListener('load', function(){
+    var target = /^#(tariff-one|tariff-all|tariff-personal|tarify)$/.test(location.hash) && document.getElementById(location.hash.slice(1));
+    if(target) target.scrollIntoView({block:'start'}); else window.scrollTo(0,0);
+  });
   if(NAMES[k]){ document.getElementById(k).classList.add('on'); }
 })();
 </script>
@@ -354,14 +388,17 @@ function g(n){ try{ if(window.ym && window.YM_ID){ ym(window.YM_ID,'reachGoal',n
   var U = 'https://t.me/okssmi?text=';
   function msg(k){
     return {
-      year_pdf: 'КАРМА 2027. Здравствуйте, Оксана! Хочу PDF-прогноз на весь 2027 год, ' + PRICES.pdf,
+      year_one: 'КАРМА 2027. Здравствуйте, Оксана! Хочу заказать PDF-прогноз по одной сфере на 2027 год за ' + PRICES.sphere + '.\n\nВыбранная сфера: __________\n\nПодскажите, как оплатить и какие данные прислать',
+      year_pdf: 'КАРМА 2027. Здравствуйте, Оксана! Хочу PDF-прогноз на 2027 год по всем сферам, ' + PRICES.pdf,
       year_full: 'КАРМА 2027. Здравствуйте, Оксана! Хочу персональный прогноз на 2027 год по всем сферам лично с вами, ' + PRICES.year
     }[k];
   }
   document.querySelectorAll('a[data-tg]').forEach(function(a){
     a.href = U + encodeURIComponent(msg(a.getAttribute('data-tg')));
-    var n = document.createElement('div'); n.className = 'tg-note'; n.textContent = '💬 Откроется чат с Оксаной, сообщение уже написано, останется нажать «Отправить»';
-    a.parentNode.insertBefore(n, a.nextSibling);
+    if(!a.nextElementSibling || !a.nextElementSibling.classList.contains('tg-note')){
+      var n = document.createElement('div'); n.className = 'tg-note'; n.textContent = '💬 Откроется чат с Оксаной, сообщение уже написано, останется нажать «Отправить»';
+      a.parentNode.insertBefore(n, a.nextSibling);
+    }
   });
 })();
 </script>
