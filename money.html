@@ -457,5 +457,30 @@ function g(n){ try{ if(window.ym && window.YM_ID){ ym(window.YM_ID,'reachGoal',n
    ym(113789141, "init", {clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true});
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/113789141" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<script>
+/* Цели досмотра страницы продукта (13.11): каждая один раз за визит */
+(function(){
+  var P = 'money';
+  function go(n){ try{ if(window.ym && window.YM_ID) ym(window.YM_ID,'reachGoal',n); }catch(e){} }
+  go(P + '_land');
+  var steps = [['.for4', P + '_mid'], ['.otz', P + '_reviews'], ['#tarify', P + '_price'], ['#tariff-personal', P + '_personal']];
+  var busy = false;
+  function check(){
+    busy = false;
+    var edge = window.innerHeight * 0.7;
+    steps = steps.filter(function(s){
+      var el = document.querySelector(s[0]);
+      if (el && el.getBoundingClientRect().top < edge){ go(s[1]); return false; }
+      return true;
+    });
+    if (!steps.length) window.removeEventListener('scroll', on);
+  }
+  function on(){ if(!busy){ busy = true; setTimeout(check, 250); } }
+  window.addEventListener('scroll', on, {passive:true});
+  setTimeout(check, 1200);
+  var b = document.getElementById('toPrice');
+  if (b) b.addEventListener('click', function(){ go(P + '_jump'); });
+})();
+</script>
 </body>
 </html>
