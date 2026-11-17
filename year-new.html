@@ -188,6 +188,10 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 .offer-data{font-size:13px;color:var(--mut);text-align:center;margin-top:8px}
 .offer-h{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:15px;margin:18px 0 8px;padding-top:14px;border-top:1px dashed var(--line)}.offer-h:first-child{margin-top:0;padding-top:0;border-top:0}
 .offer-src{font-size:13.5px;color:var(--mut);margin:8px 0 0;text-align:center}
+.fmt{display:inline-block;background:var(--wine);color:#fff;border-radius:8px;padding:5px 10px;font-size:13.5px;font-weight:800;margin:0 0 10px}
+.fmt.v{background:linear-gradient(135deg,#e2bb70,#f6dfa2 45%,#cf9e43);color:#4a2c05}
+.hl{background:#fbeede;border-left:4px solid var(--wine);border-radius:10px;padding:10px 12px;margin:10px 0 0;font-size:14.5px;line-height:1.45;color:var(--txt);text-align:left}
+.hl b{color:var(--wine)}
 .offer-more{display:block;text-align:center;margin-top:10px;font-size:14px;color:var(--wine);font-weight:700}
 </style>
 </head>
@@ -198,6 +202,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
     <h1>Ваша кармическая задача показала тему года. Прогноз покажет, когда и в какой сфере 2027 действовать, а где подстраховаться</h1>
     <div class="offer" id="offer">
       <p class="offer-h">Одна сфера · 990 ₽</p>
+      <span class="fmt">📄 PDF-файл по одной сфере</span>
       <p class="offer-q">Выберите сферу, которая волнует больше всего:</p>
       <div class="chips" id="chips">
         <button type="button" class="chip">Деньги</button><button type="button" class="chip">Работа</button><button type="button" class="chip">Любовь</button><button type="button" class="chip">Дом</button><button type="button" class="chip">Дети</button><button type="button" class="chip">Здоровье</button>
@@ -207,23 +212,25 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
         <li>когда действовать активнее, а когда подстраховаться</li>
         <li>краткие рекомендации, что делать</li>
       </ul>
-      <p class="offer-src">Составляю я сама по вашей карте. PDF придёт в течение 24 часов после оплаты</p>
+      <p class="hl">Составляю я сама по вашей карте. <b>PDF-файл придёт в течение 24 часов</b> после оплаты</p>
       <a class="btn" id="heroBtn" href="https://t.me/okssmi" target="_blank" rel="noopener" data-tg="year_one" onclick="g('buy_sphere')">Мой 2027 по одной сфере · 990 ₽</a>
       <p class="offer-h">Все сферы · 3 990 ₽</p>
+      <span class="fmt">📄 PDF-файл по всем сферам</span>
       <ul class="ch">
         <li>весь год по всем сферам: деньги, работа, любовь, семья и дом, дети, здоровье</li>
         <li>главные периоды года: когда действовать, а когда подстраховаться</li>
         <li>компенсаторика: что делать в трудные периоды</li>
       </ul>
-      <p class="offer-src">Составляю я сама, лично по вашей карте. PDF придёт в течение 48 часов</p>
+      <p class="hl">Составляю я сама, лично по вашей карте. <b>PDF-файл придёт в течение 48 часов</b></p>
       <a class="btn ghost" href="https://t.me/okssmi" target="_blank" rel="noopener" data-tg="year_pdf" onclick="g('buy_pdf')">Мой 2027 по всем сферам · 3 990 ₽</a>
 
       <p class="offer-h">Лично с Оксаной · 7 990 ₽</p>
+      <span class="fmt v">🎙 Голосовой разбор + PDF на весь год</span>
       <p class="offer-src" style="text-align:left">PDF покажет периоды. В личном разборе я объясню, что они значат именно для вас и что делать</p>
+      <p class="hl"><b>Мой голосовой разбор 40-60 минут:</b> связываю сферы между собой и объясняю, что делать в вашей ситуации</p>
       <ul class="ch">
         <li>главная тема и главные проверки 2027 года по соляру: что вообще возможно в этом году</li>
         <li>все сферы и периоды года по транзитам: где действовать, а где подстраховаться</li>
-        <li>мой голосовой разбор 40-60 минут: связываю сферы между собой и объясняю, что делать в вашей ситуации</li>
         <li>отвечаю на ваши вопросы к разбору в переписке</li>
         <li>компенсаторика на год и практика запуска года</li>
         <li>PDF на весь год тоже входит</li>
@@ -358,7 +365,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 
   <section class="tar tar-one" id="tariff-one" aria-labelledby="one-title">
     <div class="tar-head">
-      <span class="tar-label">01 · PDF по одной сфере</span>
+      <span class="tar-label">01 · PDF-файл по одной сфере</span>
       <h3 id="one-title">Одна сфера на 2027 год</h3>
       <p class="for">Выберите тему, которая волнует вас больше всего</p>
       <div class="price">990 ₽</div>
@@ -370,14 +377,15 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
       <li>краткие рекомендации по выбранной теме</li>
     </ul>
     <p class="tar-limit"><b>В PDF входит только одна сфера.</b> Остальные сферы, голосовой разбор Оксаны и обратная связь не включены</p>
-    <p class="tar-data">Файл составляю я сама по вашей карте. PDF придёт в течение 24 часов после оплаты. <b>Нужны дата, точное время и место рождения</b></p>
+    <p class="hl">Файл составляю я сама по вашей карте. <b>PDF-файл придёт в течение 24 часов</b> после оплаты</p>
+    <p class="tar-data"><b>Нужны дата, точное время и место рождения</b></p>
     <a class="btn ghost" href="https://t.me/okssmi" target="_blank" rel="noopener" data-tg="year_one" onclick="g('buy_sphere')">Заказать одну сферу · 990 ₽</a>
     <p class="tg-note order-note"><b>Как заказать</b>Нажмите кнопку, и откроется чат с Оксаной с готовым сообщением. Впишите сферу, которую хотите разобрать больше всего, и нажмите «Отправить» в Telegram</p>
   </section>
 
   <section class="tar tar-all" id="tariff-all" aria-labelledby="all-title">
     <div class="tar-head">
-      <span class="tar-label">02 · PDF по всем сферам</span>
+      <span class="tar-label">02 · PDF-файл по всем сферам</span>
       <h3 id="all-title">Все сферы на 2027 год</h3>
       <p class="for">Полная картина года в одном PDF-файле</p>
       <div class="price">3 990 ₽</div>
@@ -390,7 +398,8 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
       <li><b>кратко и по полочкам:</b> весь год в одном файле</li>
     </ul>
     <p class="tar-limit">Без моего голосового разбора и обратной связи</p>
-    <p class="tar-data">Файл составляю я сама по вашей карте: соляр, транзиты, компенсаторика. PDF придёт в течение 48 часов. <b>Нужны дата, точное время и место рождения</b></p>
+    <p class="hl">Файл составляю я сама по вашей карте: соляр, транзиты, компенсаторика. <b>PDF-файл придёт в течение 48 часов</b></p>
+    <p class="tar-data"><b>Нужны дата, точное время и место рождения</b></p>
     <a class="btn" href="https://t.me/okssmi" target="_blank" rel="noopener" data-tg="year_pdf" onclick="g('buy_pdf')">Заказать все сферы · 3 990 ₽</a>
   </section>
 
@@ -398,7 +407,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 
   <section class="tar top tar-personal" id="tariff-personal">
     <div class="tar-head">
-      <span class="tar-label">03 · Лично с Оксаной</span>
+      <span class="tar-label">03 · Лично с Оксаной · голосовой разбор + PDF</span>
       <h3>Прогноз на 2027 год</h3>
       <p class="for">Все сферы года, голосовой разбор и ответы на ваши вопросы</p>
       <div class="price">7 990 ₽</div>
@@ -409,10 +418,11 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
       <li>все сферы: деньги, работа, любовь, семья и дом, дети, здоровье</li>
       <li>периоды года по транзитам: где действовать, а где подстраховаться</li>
       <li>компенсаторика на год и практика запуска года</li>
-      <li>мой голосовой разбор 40-60 минут и PDF на весь год</li>
+      
       <li>обратная связь в переписке по вопросам к разбору</li>
       <li>нужны дата, точное время и место рождения, без точного времени прогноз не делаю</li>
     </ul>
+    <p class="hl"><b>Мой голосовой разбор 40-60 минут:</b> связываю сферы между собой и объясняю, что делать в вашей ситуации. PDF на весь год тоже входит</p>
     <a class="btn" href="https://t.me/okssmi" target="_blank" data-tg="year_full" onclick="g('buy_year')">Хочу прогноз на весь 2027 год</a>
     <p class="upsell">Хотите ещё и разбор своего денежного потенциала по натальной карте на всю жизнь? Это <a href="money.html">«Мой денежный год 2027»</a>, в нём уже есть этот полный прогноз · 13 990 ₽</p>
   </section>
