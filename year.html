@@ -124,6 +124,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 .sph{border:1.5px solid var(--line);border-radius:20px;padding:0 0 16px;margin:16px 0;background:#fff;overflow:hidden;scroll-margin-top:12px}
 .sph img{width:100%;height:190px;object-fit:cover;display:block}
 .sph .in{padding:14px 18px 0}.sph .tg{display:inline-block;background:var(--wine);color:#fff;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:8px}
+.sph-btn{margin-top:14px;font-size:15px;padding:13px}
 .sph.on{border-color:var(--wine);box-shadow:0 12px 40px rgba(125,29,51,.18)}
 .sph h3{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:18px;line-height:1.15;margin:0 0 8px}
 .otz figure{margin:0 0 16px}.otz img{display:block;max-width:100%;height:auto;margin:0 auto;border-radius:14px;box-shadow:0 6px 18px rgba(125,29,51,.08)}.otz figcaption{font-size:13px;color:var(--mut);text-align:center;margin-top:8px;font-style:italic}
@@ -176,33 +177,82 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 .order-note b{display:block;color:var(--wine);margin-bottom:4px}
 .btn:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
 @media(max-width:359px){.tar{padding:16px}.tar h3{font-size:19px}.tar-personal .tar-head{margin:-16px -16px 16px;padding:20px 16px}.tar .btn{padding:14px 10px;font-size:15px}}
+.hero h1{font-size:24px;line-height:1.2;margin:14px 0 16px;text-transform:none;font-weight:800}
+.offer{background:#fff;border:1.5px solid var(--wine);border-radius:20px;padding:16px 16px 14px;text-align:left;box-shadow:0 12px 40px rgba(125,29,51,.12)}
+.offer-q{font-weight:700;font-size:15px;margin:0 0 10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.chip{border:1.5px solid var(--line);background:var(--bg);color:var(--txt);border-radius:999px;padding:8px 13px;font:600 14px Manrope,sans-serif;cursor:pointer}
+.chip.on{background:var(--wine);border-color:var(--wine);color:#fff}
+.offer-t{font-weight:800;color:var(--wine);font-size:15px;margin:0 0 6px}
+.offer ul.ch li{font-size:15px;margin:0 0 6px}
+.offer .btn{margin-top:12px}
+.offer-data{font-size:13px;color:var(--mut);text-align:center;margin-top:8px}
+.offer-h{font-family:Montserrat,sans-serif;font-weight:900;text-transform:uppercase;color:var(--wine);font-size:15px;margin:18px 0 8px;padding-top:14px;border-top:1px dashed var(--line)}.offer-h:first-child{margin-top:0;padding-top:0;border-top:0}
+.offer-src{font-size:13.5px;color:var(--mut);margin:8px 0 0;text-align:center}
+.fmt{display:inline-block;background:var(--wine);color:#fff;border-radius:8px;padding:5px 10px;font-size:13.5px;font-weight:800;margin:0 0 10px}
+.fmt.v{background:linear-gradient(135deg,#e2bb70,#f6dfa2 45%,#cf9e43);color:#4a2c05}
+.hl{background:#fbeede;border-left:4px solid var(--wine);border-radius:10px;padding:10px 12px;margin:10px 0 0;font-size:14.5px;line-height:1.45;color:var(--txt);text-align:left}
+.hl b{color:var(--wine)}
+.hook{font-size:16px;line-height:1.55;margin:0 0 12px;color:var(--txt)}
+.offer-more{display:block;text-align:center;margin-top:10px;font-size:14px;color:var(--wine);font-weight:700}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="hero">
     <div class="kick">Оксана Смирнова · астролог</div>
-    <h1>Прогноз<br>на 2027 год</h1>
-    <p>Ваш год по сферам: тенденции года, чего ждать, где подстраховаться и что делать в трудный период</p>
+    <h1>Ваша кармическая задача показала тему года. Прогноз покажет, когда и в какой сфере 2027 действовать, а где подстраховаться</h1>
+    <div id="offer" style="margin:0 0 16px">
+      <a class="btn" href="#tarify" onclick="g('year_jump')">Выбрать формат ↓</a>
+    </div>
     <img class="photo" src="img/oksana-kniga.jpg" alt="Оксана Смирнова">
   </header>
 
   <article class="art">
 <div class="card art-head">
-    <div class="art-t">3 минуты чтения</div>
     <h2>Почему один и тот же год у вас будет и трудным, и удачным одновременно</h2>
     <p class="art-lead">Мы привыкли спрашивать: «Каким будет мой 2027 год, хорошим или плохим?» Но год почти никогда не бывает одним цветом. В одной сфере он даёт проверку, а в другой в это же время открывает двери</p>
-    <figure class="fig"><img src="img/art-god.jpg" alt=""><figcaption>Один год, но в каждой сфере свой сезон</figcaption></figure>
+    <figure class="fig"><img src="img/art-god.jpg" alt=""></figure>
 
     </div><div class="stp stp-1"><img class="stp-img" src="img/st-sfery.jpg" alt="">
-    <h3><i>1</i>Год идёт по всем сферам сразу</h3>
-    <p class="case-t">Покажу на себе</p>
+    <h3><i>1</i>Покажу на себе</h3>
     <p><b>За один месяц:</b> я оказалась в больнице с ребёнком, сама прошла обследование, где нашли хроническое воспаление, и в это же время у меня начал расти блог</p>
-    <div class="viz"><div class="viz-h">Мой реальный месяц</div><div class="duo"><div class="l"><b>🏥</b><strong>Семья и здоровье</strong>больница с ребёнком и моё обследование</div><div class="r"><b>📈</b><strong>Работа</strong>в это же время растёт блог</div></div><div class="viz-s">Карта показала обе линии заранее</div></div>
     <blockquote>Не зная прогноза, я бы впала в жёсткий депресс из-за болезни ребёнка и в страх перед результатами. <b>Но я заранее видела в карте обе линии:</b> закрытые учреждения и здоровье, а рядом рост в работе. Поэтому я не опустила руки, а пользовалась тем, что давал месяц</blockquote>
-    <p>Вот почему я не делю периоды на «хорошие» и «плохие». <b>Одна сфера может проседать, а другая в тот же момент даёт шанс, который легко упустить</b>, если смотреть только на трудное</p>
+    <p>Вот почему я не делю периоды на «хорошие» и «плохие». <b>Шанс легко упустить, если смотреть только на трудное</b></p>
 
-    </div><div class="stp stp-2"><img class="stp-img" src="img/st-kogda.jpg" alt="">
+    </div>
+  </article>
+  <section class="card otz">
+    <h2>Что пишут после прогноза</h2>
+    <figure><img src="img/otzyv-10.jpg" width="1080" height="511" alt="Отзыв: прогноз не просто прогноз, а путеводитель" loading="lazy"><figcaption>«Не просто прогноз, а путеводитель»</figcaption></figure>
+    <figure><img src="img/otzyv-5.jpg" width="1065" height="448" alt="Отзыв после голосового прогноза: про партнёра всё подтвердилось" loading="lazy"><figcaption>После голосового прогноза: про партнёра всё подтвердилось</figcaption></figure>
+    <figure><img src="img/otzyv-7.jpg" width="878" height="1174" alt="Отзыв коллеги-астролога после голосового разбора" loading="lazy"><figcaption>Отзыв коллеги-астролога: «каждому астрологу свой астролог»</figcaption></figure>
+  </section>
+
+  <h2 style="text-align:center;margin-top:26px">Что я разберу по сферам</h2>
+
+  <section class="sph" id="money"><img src="img/sfera-dengi.jpg" alt=""><div class="in"><div class="tg">Деньги</div><h3>Что 2027 год приносит в деньгах</h3>
+    <ul class="ch"><li>через что придут деньги в этом году и где искать дополнительный заработок</li><li>где лучше не рисковать деньгами и не брать новые кредиты на эмоциях</li><li>компенсаторика по деньгам: например, кредит в этом году только на недвижимость</li></ul><a class="btn sph-btn" href="#tarify" data-sp="Деньги">Мой 2027: Деньги · к тарифам ↓</a></div></section>
+
+  <section class="sph" id="career"><img src="img/sfera-kariera.jpg" alt=""><div class="in"><div class="tg">Карьера и бизнес</div><h3>Что 2027 год приносит в работе</h3>
+    <ul class="ch"><li>тенденции года в работе: рост, новая роль, своё дело или время закрепиться</li><li>где подстраховаться перед сменой работы, повышением или запуском проекта</li><li>в какие периоды нагрузка вырастет и как не выгореть</li><li>компенсирующие действия на напряжённые периоды в работе</li></ul><a class="btn sph-btn" href="#tarify" data-sp="Работа">Мой 2027: Работа · к тарифам ↓</a></div></section>
+
+  <section class="sph" id="love"><img src="img/sfera-otnosheniya.jpg" alt=""><div class="in"><div class="tg">Отношения</div><h3>Что 2027 год приносит в любви</h3>
+    <ul class="ch"><li>что год открывает в любви: встречи, предложения, новый уровень в паре</li><li>где пара проходит проверку и как сгладить кризис</li><li>какие старые сценарии в отношениях год просит отпустить</li><li>компенсирующие действия на напряжённые периоды в паре</li></ul><a class="btn sph-btn" href="#tarify" data-sp="Любовь">Мой 2027: Любовь · к тарифам ↓</a></div></section>
+
+  <section class="sph" id="home"><div class="in"><div class="tg">Дом и переезды</div><h3>Семья, недвижимость, переезды и поездки</h3>
+    <ul class="ch"><li>что год приносит дому и семье, недвижимости</li><li>переезды и поездки: что возможно в 2027 году</li><li>компенсаторика при напряжении по дому и имуществу: заранее ремонт или осмотр машины</li></ul><a class="btn sph-btn" href="#tarify" data-sp="Дом">Мой 2027: Дом · к тарифам ↓</a></div></section>
+
+  <section class="sph" id="kids"><div class="in"><div class="tg">Дети и обучение</div><h3>Дети, творчество и обучение</h3>
+    <ul class="ch"><li>где детям понадобится особое внимание и чем они порадуют</li><li>творчество и обучение: что год открывает для учёбы</li><li>компенсирующие действия на напряжённые периоды</li></ul><a class="btn sph-btn" href="#tarify" data-sp="Дети">Мой 2027: Дети · к тарифам ↓</a></div></section>
+
+  <section class="sph" id="health"><img src="img/sfera-zdorovie.jpg" alt=""><div class="in"><div class="tg">Здоровье и силы</div><h3>Что 2027 год приносит телу</h3>
+    <ul class="ch"><li>в какие периоды особенно беречь силы и не брать лишнего</li><li>где стоит пройти обследование заранее</li><li>где утекает энергия и как её вернуть</li><li>компенсирующие действия на напряжённые периоды</li></ul><p style="font-size:13px;color:var(--mut)">Карта не заменяет врача, она подсказывает, когда к себе прислушаться внимательнее</p><a class="btn sph-btn" href="#tarify" data-sp="Здоровье">Мой 2027: Здоровье · к тарифам ↓</a></div></section>
+
+  <figure class="op"><img src="img/oksana-vecher.jpg" alt="Оксана Смирнова"><figcaption><b>Ваш 2027 год можно прожить по плану</b>тенденции, периоды и компенсаторика в одном разборе</figcaption></figure>
+
+  <article class="art">
+<div class="stp stp-2"><img class="stp-img" src="img/st-kogda.jpg" alt="">
     <h3><i>2</i>Главное в прогнозе: соляр</h3>
     <p><b>Соляр, карта вашего личного года, для меня основа прогноза.</b> Он показывает, что вообще возможно в вашем году: есть ли возможность заработать, выйти замуж, переехать, вырасти в работе</p>
     <p><b>Если в соляре нет возможности выйти замуж,</b> то период, который по транзитам похож на замужество, не сыграет этой роли. Он проиграется совершенно по-другому: например, человек в это время нарастит аудиторию в Инстаграме</p>
@@ -219,17 +269,12 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
     </div><div class="stp stp-1 kot" id="kot">
     <h3><i>♡</i>Компенсаторика на моём примере</h3>
     <div class="case"><span class="case-lbl">Мой пример</span>
-    <p class="case-t">Расскажу на своём примере: я не собиралась заводить кота</p>
-    <p><b>В моей жизни появился кот.</b> Я даже не планировала заводить питомца: у меня не было такого желания, я не ходила в зоомагазины, не листала объявления, не просила «подарите котика»</p>
-    <p>Смотрела свой прогноз за прошлый год и увидела, что у меня тогда <b>Луна проходила по шестому дому</b></p>
-    <div class="ba"><div><b>Луна в 6 доме - это:</b> переживания на работе; появление животного (кошки - это лунное животное); испытания через здоровье и негативные эмоции (ЖКТ и по-женски)</div></div>
-    <p>Естественно, как и для многих для меня важно здоровье и работа, на это я и обратила внимание</p>
-    <p>И только сейчас я поняла: <b>появление кота стало моей компенсацией!</b> То, что могло вылиться в болезни или упадок сил, мягко отыгралось через заботу о животном</p>
-    <p><b>6 дом ещё называют домом служения.</b> Когда туда попадает Луна, важно служить: заботиться о ком-то, помогать, вкладывать душу. У меня это отыгралось через заботу о коте</p>
+    <p class="case-t">Я не собиралась заводить кота</p>
+    <p><b>В моей жизни появился кот,</b> хотя такого желания у меня не было. В прогнозе прошлого года у меня <b>Луна проходила по шестому дому</b>: это переживания на работе, испытания через здоровье и появление животного (кошка - лунное животное)</p>
+    <p>Только потом я поняла: <b>кот стал моей компенсацией.</b> 6 дом называют домом служения, и то, что могло вылиться в болезни или упадок сил, мягко отыгралось через заботу о нём</p>
     </div>
     <blockquote>Вот так Вселенная всегда подкидывает нам выбор: пройти через сложности или найти мягкий вариант, который компенсирует их</blockquote>
     </div>
-    <p class="doc">Конечно, карта не заменяет врачей и обследования</p>
 
     <div class="stp stp-3"><img class="stp-img" src="img/st-kak.jpg" alt="">
     <h3><i>3</i>Как этим пользуются клиенты</h3>
@@ -245,9 +290,9 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 
     <div class="band-warn"><h3 class="warn">Что будет, если не знать</h3>
     <p><b>Трудный период в одной сфере кажется концом света,</b> и вы не замечаете, что рядом открывается другая. Решения про работу, деньги и отношения принимаются на эмоциях, а потом выясняется, что момент был не тот</p>
-    <figure class="fig"><img src="img/art-karta.jpg" alt=""><figcaption>Голосовой разбор и PDF, к которым вы возвращаетесь весь год</figcaption></figure>
-    <p><b>Прогноз нужен, чтобы заранее знать, где подстелить соломки,</b> и принимать решения спокойно, понимая, что вам даёт год</p>
-    <p class="art-end">Поэтому я делаю прогноз на 2027 год по всем сферам. Ниже рассказываю, что я разберу и как это проходит ↓</p>
+    <figure class="fig"><img src="img/art-karta.jpg" alt=""></figure>
+    <p><b>С прогнозом трудный период не застаёт врасплох,</b> а решения вы принимаете спокойно, понимая, что вам даёт год</p>
+    <p class="art-end">Поэтому я делаю прогноз на 2027 год по всем сферам. Форматы - ниже ↓</p>
     </div>
   </article>
 
@@ -264,53 +309,21 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
   </section>
 
   <section class="card gsteps">
-    <h2>Как я считаю ваш год</h2>
+    <h2>Что нужно для прогноза</h2>
     <div class="step"><b>1</b><p><span>Ваш космический паспорт</span>Дата, точное время и место рождения. У подруги, родившейся в тот же день, год сложится по-другому. Без точного времени рождения я прогноз не делаю</p></div>
-    <div class="step"><b>2</b><p><span>Соляр</span>Основа прогноза: что вообще возможно в вашем году, главная тема и главные проверки</p></div>
-    <div class="step"><b>3</b><p><span>Транзиты</span>Движение планет по вашей карте. Уточняют периоды внутри тенденций года: где действовать, а где подстраховаться</p></div>
-    <div class="step"><b>4</b><p><span>Компенсаторика</span>Как подстелить соломки: простые действия и обычная логика, которые смягчают трудные периоды</p></div>
     <p class="quote">Это не приговор, а карта. Прогноз это план действий, а не гадание на кофейной гуще</p>
   </section>
 
   <figure class="otz otz-one"><img src="img/otzyv-8.jpg" width="1029" height="962" alt="Клиентка пишет про транзит Урана по восьмому дому и обучение" loading="lazy"><figcaption>Транзиты в жизни: клиентка узнала свой транзит Урана по восьмому дому, «началось это у меня уже»</figcaption></figure>
-
-  <h2 style="text-align:center;margin-top:26px">Что я разберу по сферам</h2>
-
-  <section class="sph" id="money"><img src="img/sfera-dengi.jpg" alt=""><div class="in"><div class="tg">Деньги</div><h3>Что 2027 год приносит в деньгах</h3>
-    <ul class="ch"><li>через что придут деньги в этом году и где искать дополнительный заработок</li><li>где лучше не рисковать деньгами и не брать новые кредиты на эмоциях</li><li>компенсаторика по деньгам: например, кредит в этом году только на недвижимость</li></ul></div></section>
-
-  <section class="sph" id="career"><img src="img/sfera-kariera.jpg" alt=""><div class="in"><div class="tg">Карьера и бизнес</div><h3>Что 2027 год приносит в работе</h3>
-    <ul class="ch"><li>тенденции года в работе: рост, новая роль, своё дело или время закрепиться</li><li>где подстраховаться перед сменой работы, повышением или запуском проекта</li><li>в какие периоды нагрузка вырастет и как не выгореть</li><li>компенсирующие действия на напряжённые периоды в работе</li></ul></div></section>
-
-  <section class="sph" id="love"><img src="img/sfera-otnosheniya.jpg" alt=""><div class="in"><div class="tg">Отношения</div><h3>Что 2027 год приносит в любви</h3>
-    <ul class="ch"><li>что год открывает в любви: встречи, предложения, новый уровень в паре</li><li>где пара проходит проверку и как сгладить кризис</li><li>какие старые сценарии в отношениях год просит отпустить</li><li>компенсирующие действия на напряжённые периоды в паре</li></ul></div></section>
-
-  <section class="sph" id="home"><div class="in"><div class="tg">Дом и переезды</div><h3>Семья, недвижимость, переезды и поездки</h3>
-    <ul class="ch"><li>что год приносит дому и семье, недвижимости</li><li>переезды и поездки: что возможно в 2027 году</li><li>компенсаторика при напряжении по дому и имуществу: заранее ремонт или осмотр машины</li></ul></div></section>
-
-  <section class="sph" id="kids"><div class="in"><div class="tg">Дети и обучение</div><h3>Дети, творчество и обучение</h3>
-    <ul class="ch"><li>где детям понадобится особое внимание и чем они порадуют</li><li>творчество и обучение: что год открывает для учёбы</li><li>компенсирующие действия на напряжённые периоды</li></ul></div></section>
-
-  <section class="sph" id="health"><img src="img/sfera-zdorovie.jpg" alt=""><div class="in"><div class="tg">Здоровье и силы</div><h3>Что 2027 год приносит телу</h3>
-    <ul class="ch"><li>в какие периоды особенно беречь силы и не брать лишнего</li><li>где стоит пройти обследование заранее</li><li>где утекает энергия и как её вернуть</li><li>компенсирующие действия на напряжённые периоды</li></ul><p style="font-size:13px;color:var(--mut)">Карта не заменяет врача, она подсказывает, когда к себе прислушаться внимательнее</p></div></section>
-
-  <figure class="op"><img src="img/oksana-vecher.jpg" alt="Оксана Смирнова"><figcaption><b>Ваш 2027 год можно прожить по плану</b>тенденции, периоды и компенсаторика в одном разборе</figcaption></figure>
-
-  <section class="card otz">
-    <h2>Что пишут после прогноза</h2>
-    <figure><img src="img/otzyv-10.jpg" width="1080" height="511" alt="Отзыв: прогноз не просто прогноз, а путеводитель" loading="lazy"><figcaption>«Не просто прогноз, а путеводитель»</figcaption></figure>
-    <figure><img src="img/otzyv-5.jpg" width="1065" height="448" alt="Отзыв после голосового прогноза: про партнёра всё подтвердилось" loading="lazy"><figcaption>После голосового прогноза: про партнёра всё подтвердилось</figcaption></figure>
-    <figure><img src="img/otzyv-7.jpg" width="878" height="1174" alt="Отзыв коллеги-астролога после голосового разбора" loading="lazy"><figcaption>Отзыв коллеги-астролога: «каждому астрологу свой астролог»</figcaption></figure>
-  </section>
 
   <h2 id="tarify" style="text-align:center;margin-top:26px;scroll-margin-top:16px">Выберите формат</h2>
   <p class="format-intro">Одна сфера, все сферы или личный разбор Оксаны</p>
 
   <section class="tar tar-one" id="tariff-one" aria-labelledby="one-title">
     <div class="tar-head">
-      <span class="tar-label">01 · PDF по одной сфере</span>
+      <span class="tar-label">01 · PDF-файл по одной сфере</span>
       <h3 id="one-title">Одна сфера на 2027 год</h3>
-      <p class="for">Выберите тему, которая волнует вас больше всего</p>
+      <p class="for" id="oneFor">Выберите тему, которая волнует вас больше всего</p>
       <div class="price">990 ₽</div>
       <p class="price-unit">за одну выбранную сферу на год</p>
     </div>
@@ -320,14 +333,15 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
       <li>краткие рекомендации по выбранной теме</li>
     </ul>
     <p class="tar-limit"><b>В PDF входит только одна сфера.</b> Остальные сферы, голосовой разбор Оксаны и обратная связь не включены</p>
-    <p class="tar-data">Файл составляется программой по вашим данным и моей методике. <b>Нужны дата, точное время и место рождения</b></p>
+    <p class="hl">Файл составляю я сама по вашей карте. <b>PDF-файл придёт в течение 24 часов</b> после оплаты</p>
+    <p class="tar-data"><b>Нужны дата, точное время и место рождения</b></p>
     <a class="btn ghost" href="https://t.me/okssmi" target="_blank" rel="noopener" data-tg="year_one" onclick="g('buy_sphere')">Заказать одну сферу · 990 ₽</a>
     <p class="tg-note order-note"><b>Как заказать</b>Нажмите кнопку, и откроется чат с Оксаной с готовым сообщением. Впишите сферу, которую хотите разобрать больше всего, и нажмите «Отправить» в Telegram</p>
   </section>
 
   <section class="tar tar-all" id="tariff-all" aria-labelledby="all-title">
     <div class="tar-head">
-      <span class="tar-label">02 · PDF по всем сферам</span>
+      <span class="tar-label">02 · PDF-файл по всем сферам</span>
       <h3 id="all-title">Все сферы на 2027 год</h3>
       <p class="for">Полная картина года в одном PDF-файле</p>
       <div class="price">3 990 ₽</div>
@@ -340,7 +354,8 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
       <li><b>кратко и по полочкам:</b> весь год в одном файле</li>
     </ul>
     <p class="tar-limit">Без моего голосового разбора и обратной связи</p>
-    <p class="tar-data">Файл составляется программой по вашим данным и моей методике: соляр, транзиты, компенсаторика. <b>Нужны дата, точное время и место рождения</b></p>
+    <p class="hl">Файл составляю я сама по вашей карте: соляр, транзиты, компенсаторика. <b>PDF-файл придёт в течение 48 часов</b></p>
+    <p class="tar-data"><b>Нужны дата, точное время и место рождения</b></p>
     <a class="btn" href="https://t.me/okssmi" target="_blank" rel="noopener" data-tg="year_pdf" onclick="g('buy_pdf')">Заказать все сферы · 3 990 ₽</a>
   </section>
 
@@ -348,7 +363,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 
   <section class="tar top tar-personal" id="tariff-personal">
     <div class="tar-head">
-      <span class="tar-label">03 · Лично с Оксаной</span>
+      <span class="tar-label">03 · Лично с Оксаной · голосовой разбор + PDF</span>
       <h3>Прогноз на 2027 год</h3>
       <p class="for">Все сферы года, голосовой разбор и ответы на ваши вопросы</p>
       <div class="price">7 990 ₽</div>
@@ -359,10 +374,11 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
       <li>все сферы: деньги, работа, любовь, семья и дом, дети, здоровье</li>
       <li>периоды года по транзитам: где действовать, а где подстраховаться</li>
       <li>компенсаторика на год и практика запуска года</li>
-      <li>мой голосовой разбор 40-60 минут и PDF на весь год</li>
+      
       <li>обратная связь в переписке по вопросам к разбору</li>
       <li>нужны дата, точное время и место рождения, без точного времени прогноз не делаю</li>
     </ul>
+    <p class="hl"><b>Мой голосовой разбор 40-60 минут:</b> связываю сферы между собой и объясняю, что делать в вашей ситуации. PDF на весь год тоже входит</p>
     <a class="btn" href="https://t.me/okssmi" target="_blank" data-tg="year_full" onclick="g('buy_year')">Хочу прогноз на весь 2027 год</a>
     <p class="upsell">Хотите ещё и разбор своего денежного потенциала по натальной карте на всю жизнь? Это <a href="money.html">«Мой денежный год 2027»</a>, в нём уже есть этот полный прогноз · 13 990 ₽</p>
   </section>
@@ -388,12 +404,22 @@ function g(n){ try{ if(window.ym && window.YM_ID){ ym(window.YM_ID,'reachGoal',n
   var U = 'https://t.me/okssmi?text=';
   function msg(k){
     return {
-      year_one: 'КАРМА 2027. Здравствуйте, Оксана! Хочу заказать PDF-прогноз по одной сфере на 2027 год за ' + PRICES.sphere + '.\n\nВыбранная сфера: __________\n\nПодскажите, как оплатить и какие данные прислать',
+      year_one: 'КАРМА 2027. Здравствуйте, Оксана! Хочу заказать PDF-прогноз по одной сфере на 2027 год за ' + PRICES.sphere + '.\n\nВыбранная сфера: ' + (window.__sphere || '__________') + '\n\nПодскажите, как оплатить и какие данные прислать',
       year_pdf: 'КАРМА 2027. Здравствуйте, Оксана! Хочу PDF-прогноз на 2027 год по всем сферам, ' + PRICES.pdf,
       year_full: 'КАРМА 2027. Здравствуйте, Оксана! Хочу персональный прогноз на 2027 год по всем сферам лично с вами, ' + PRICES.year
     }[k];
   }
+  window.__setTg = function(){ document.querySelectorAll('a[data-tg]').forEach(function(a){ a.href = U + encodeURIComponent(msg(a.getAttribute('data-tg'))); }); };
+  document.querySelectorAll('#chips .chip').forEach(function(c){
+    c.addEventListener('click', function(){
+      document.querySelectorAll('#chips .chip').forEach(function(x){ x.classList.remove('on'); });
+      c.classList.add('on'); window.__sphere = c.textContent;
+      document.getElementById('heroBtn').textContent = 'Мой 2027: ' + c.textContent + ' · 990 ₽';
+      window.__setTg();
+    });
+  });
   document.querySelectorAll('a[data-tg]').forEach(function(a){
+    if(a.id === 'heroBtn'){ a.href = U + encodeURIComponent(msg('year_one')); return; }
     a.href = U + encodeURIComponent(msg(a.getAttribute('data-tg')));
     if(!a.nextElementSibling || !a.nextElementSibling.classList.contains('tg-note')){
       var n = document.createElement('div'); n.className = 'tg-note'; n.textContent = '💬 Откроется чат с Оксаной, сообщение уже написано, останется нажать «Отправить»';
@@ -440,5 +466,6 @@ function g(n){ try{ if(window.ym && window.YM_ID){ ym(window.YM_ID,'reachGoal',n
   if (b) b.addEventListener('click', function(){ go(P + '_jump'); });
 })();
 </script>
+<script>document.querySelectorAll('.sph-btn').forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-sp');window.__sphere=v;try{window.__setTg&&window.__setTg()}catch(e){}var f=document.getElementById('oneFor');if(f)f.innerHTML='Ваша сфера: <b>'+v+'</b>';var o=document.querySelector('#tariff-one a[data-tg="year_one"]');if(o)o.textContent='Заказать: '+v+' · 990 ₽';try{if(window.ym&&window.YM_ID)ym(window.YM_ID,'reachGoal','year_jump')}catch(e){}})})</script>
 </body>
 </html>
