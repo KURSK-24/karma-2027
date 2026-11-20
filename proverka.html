@@ -11,12 +11,12 @@ button{margin-top:14px;width:100%;padding:14px;border:0;border-radius:14px;backg
 #err{color:#b00;margin:8px 0 0}.meta{margin:18px 0 8px;font-weight:700}
 .sp{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin:12px 0}.sp h2{font-size:18px;color:var(--wine);margin:0 0 8px}.sp h2 small{color:var(--mut);font-weight:400;font-size:13px}
 .pr{border-left:4px solid #999;padding:6px 10px;margin:6px 0;background:#faf8f6;border-radius:8px;font-size:15px}.pr span{color:var(--mut)}
-.pr.ok{border-color:#2e8b57}.pr.bad{border-color:#b0283c}.pr.du{border-color:#c9a063}.none{color:var(--mut)}
+.pr.ok{border-color:#2e8b57}.pr.bad{border-color:#b0283c}.pr.du{border-color:#c9a063}.none{color:var(--mut)}.qa .q{font-weight:700;margin:12px 0 2px}.qa .a{margin:0 0 6px}.ph{font-size:13px;color:var(--mut);margin:14px 0 4px;border-top:1px dashed var(--line);padding-top:8px}
 details.nat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px}details.nat table{width:100%;font-size:14px;border-collapse:collapse}details.nat td{padding:3px 4px;border-bottom:1px solid #eee}
 .rules{font-size:14px;color:var(--mut);background:#fff;border-radius:12px;padding:10px 12px;border:1px dashed var(--line);margin:0 0 12px}
 </style></head><body><div class="wrap">
 <h1>Проверка расчёта прогноза 2027</h1>
-<p class="lead">Рабочая страница для Оксаны. Вбейте любую дату и сверьте периоды со своей программой</p>
+<p class="lead">Рабочая страница для Оксаны. Вбейте любую дату: сверху ответы на вопросы клиенток по каждой сфере (черновик, ждёт ваших правок), под ними периоды, на которых они основаны. Периоды можно сверить со своей программой</p>
 <div class="rules">Как считает программа: дома Плацидус, координаты топоцентрические, современные управители. Транзиты Юпитера, Сатурна, Урана, Нептуна, Плутона к управителям домов сферы, к планетам в доме и к куспидам (к куспидам только соединения). Орбисы: Юпитер 3°, Сатурн 2°, остальные 1°. Трин и секстиль благоприятные, квадрат и оппозиция напряжённые, соединение дуальное. Период: календарный 2027 год</div>
 <label for="d">Дата рождения</label><input id="d" type="date" min="1930-01-01" max="2012-12-31">
 <label for="t">Точное время рождения</label><input id="t" type="time">
@@ -26,5 +26,6 @@ details.nat{background:#fff;border:1px solid var(--line);border-radius:12px;padd
 </div>
 <script src="astronomy.browser.min.js"></script>
 <script src="proverka-core.js"></script>
+<script src="proverka-answers.js"></script>
 <script src="proverka.js"></script>
 </body></html>

@@ -35,7 +35,7 @@ function calc(Y, M, D, hh, mi, city) {
         Object.keys(gr).forEach(function (a) {
           if (isC && a !== 'conj') return; // правило Оксаны 19.11: к куспидам только соединения
           var ws = gr[a], tone = a === 'conj' ? 'du' : (a === 'sq' || a === 'opp' ? 'bad' : 'ok');
-          per.push({tone: tone, t: ws[0].s, d: ws.map(function (w) { return rg(w.s, w.e); }).join('; '),
+          per.push({tone: tone, t: ws[0].s, ws: ws.map(function (w) { return [w.s, w.e]; }), d: ws.map(function (w) { return rg(w.s, w.e); }).join('; '),
             ti: PNR[T] + ' ' + ASY[a] + ' ' + 'к ' + (isC ? 'куспиду ' + tg[0].slice(4) + ' дома' : PNG[tg[0]] + ' (' + tg[1] + ')')});
         });
       });
@@ -52,6 +52,7 @@ function render(r, label) {
     r.C.map(function (c, i) { return '<tr><td>Куспид ' + (i + 1) + '</td><td>' + Math.floor(c % 30) + '° ' + SIGNS[sgn(c)] + '</td><td></td></tr>'; }).join('') + '</table></details>';
   r.out.forEach(function (o) {
     h += '<section class="sp"><h2>' + o.s.t + ' <small>(' + o.s.h.join(', ') + ' дом)</small></h2>';
+    h += '<div class="qa">' + ANS[o.s.id](o.per).map(function (q) { return '<p class="q">💬 «' + q[0] + '»</p><p class="a">' + q[1].replace(/[\s.]+$/, '') + '</p>'; }).join('') + '</div><p class="ph">Периоды года, на которых основаны ответы:</p>';
     if (!o.per.length) h += '<p class="none">В 2027 медленные планеты эту сферу не затрагивают</p>';
     o.per.forEach(function (p) { h += '<div class="pr ' + p.tone + '"><b>' + TONE[p.tone][0] + '</b> · ' + p.d + '<br><span>' + p.ti + '</span></div>'; });
     h += '</section>';
