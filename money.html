@@ -457,5 +457,20 @@ function g(n){ try{ if(window.ym && window.YM_ID){ ym(window.YM_ID,'reachGoal',n
   if (b) b.addEventListener('click', function(){ go(P + '_jump'); });
 })();
 </script>
+<script>
+// Кнопки оплаты ведут в бот @Karma_Task2027_bot (BotHelp + Продамус), 21.11
+(function(){
+  var B='https://t.me/Karma_Task2027_bot?start=dl-', DL={'Деньги':'1794958425984','Работа':'1794959486b3fb9c3e7e13','Отношения':'179495956205a1df7483a7','Семья и жильё':'1794959580c4a3fb67d6e6','Дети':'179495960951ba869be719','Здоровье':'1794959626fa6f3c972336','Поездки и обучение':'1795174954b5822eb4f88a'};
+  var FIX={year_pdf:'17951752346aaa6dcb9617', year_full:'17951754248c491faf315e', money_full:'17951754990f4982e73365'};
+  var NOTE='🤖 Откроется бот Оксаны в Telegram: нажмите «Запустить», там кнопка оплаты. После оплаты бот попросит дату, время и город рождения';
+  function note(a){ var n=a.nextElementSibling; if(n && n.classList.contains('tg-note')){ n.innerHTML = n.classList.contains('order-note') ? '<b>Как заказать</b>'+NOTE : NOTE; } }
+  var old=window.__setTg;
+  window.__setTg=function(){ try{old&&old()}catch(e){}
+    document.querySelectorAll('a[data-tg]').forEach(function(a){ var k=a.getAttribute('data-tg'), id=FIX[k];
+      if(/_one$/.test(k)) id=DL[window.__sphere];
+      if(id){ a.href=B+id; note(a); } }); };
+  window.__setTg();
+})();
+</script>
 </body>
 </html>
