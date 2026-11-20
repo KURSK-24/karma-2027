@@ -15,6 +15,7 @@ function solar(Y, M, D, hh, mi, city) {
 }
 function fmtDT(d, zone) { return new Intl.DateTimeFormat('ru-RU', {timeZone: zone, day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit'}).format(d).replace(',', ' ·'); }
 function P_(t) { return '<p>' + esc(t) + '</p>'; }
+function OKS(b, h) { var x = (PL_SOL[b] || {})[h]; if (!x) return ''; return x.p.map(P_).join('') + '<h4>Что делать</h4><ol class="komp">' + x.r.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ol>'; }
 render = function (r, label) {
   var Q = new URLSearchParams(location.search);
   if ((Q.get('sp') || 'all') !== 'all') return oldRender(r, label);
@@ -32,20 +33,22 @@ render = function (r, label) {
   h += '<section class="sp"><div class="kick">ОБЩИЙ ФОН ✦</div><h2>ОБЩИЙ ФОН И НАСТРОЕНИЕ ГОДА</h2><h3>Асцендент соляра в ' + SIGN_IN[S.asc] + '</h3>' + (ASC_TXT[S.asc] || []).map(P_).join('') + '</section>';
   // 3. Солнце соляра
   h += '<section class="sp"><div class="kick">ГЛАВНОЕ ✦</div><h2>САМЫЕ ЯРКИЕ СОБЫТИЯ ГОДА</h2><p>Положение солярного Солнца показывает сферу, в которой могут происходить самые заметные для Вас события года. К ней придётся возвращаться, вкладывать силы, принимать решения. Даже если изначально Вы собирались заниматься совсем другими делами, обстоятельства могут регулярно переключать Ваше внимание именно сюда</p>' +
-    '<h3>Солнце соляра в ' + sunH + ' доме</h3><p>В Вашем случае на первый план выходит тема ' + HTHEME[sunH] + '. Здесь будет больше всего событий, решений и перемен</p>' + '</section>';
+    '<h3>Солнце соляра в ' + sunH + ' доме</h3>' + OKS('Sun', sunH) + '</section>';
+  var moonH = S.H(S.P.Moon);
+  h += '<section class="sp"><div class="kick">ЭМОЦИИ ✦</div><h2>ЗА ЧТО ВЫ БУДЕТЕ ВОЛНОВАТЬСЯ В ЭТОМ ГОДУ</h2><p>Луна соляра показывает наши эмоции в этом году и то, за что мы будем переживать</p><h3>Луна соляра в ' + moonH + ' доме</h3>' + OKS('Moon', moonH) + '</section>';
   // 4. сферы: выжимка из соляра + ответы на вопросы
   h += '<section class="sp"><div class="kick">ПО СФЕРАМ ✦</div><h2>ЧТО СОЛЯР ПОКАЗЫВАЕТ ПО КАЖДОЙ СФЕРЕ</h2>';
   var EMO = {money: '💰', work: '💼', love: '❤️', home: '🏡', kids: '🧸', health: '🌿', travel: '✈️'};
   r.out.forEach(function (o, oi) {
     var inS = PL10.filter(function (b) { return o.s.h.indexOf(S.H(S.P[b])) >= 0; });
     h += '<div class="sf ' + (oi % 2 ? 'sf-dark' : 'sf-light') + '"><div class="sfh">' + EMO[o.s.id] + ' ' + o.s.t.toUpperCase() + '</div>';
-    if (inS.length) h += inS.map(function (b) { var hh = S.H(S.P[b]); return '<p><b>' + PN_R[b] + ' в ' + hh + ' доме соляра</b> (' + HTHEME[hh] + '): ' + PMEAN[b] + '</p>'; }).join('');
+    if (inS.length) h += inS.map(function (b) { var hh = S.H(S.P[b]); var x = (PL_SOL[b] || {})[hh], t = x ? (x.p.filter(function (q) { return /^Очень часто/.test(q); })[0] || x.p[0]) : ''; return '<p><b>' + PN_R[b] + ' в ' + hh + ' доме соляра.</b> ' + esc(t) + '</p>'; }).join('');
     else h += '<p>Планет соляра в этой сфере нет. Сфера в 2027 спокойная, без главных событий года, а её оттенки покажут периоды ниже</p>';
     h += ANS[o.s.id](o.per).map(function (q) { return '<p class="q">💬 «' + q[0] + '»</p><p>' + esc(q[1]) + '</p>'; }).join('') + '</div>';
   });
   h += '</section>';
   // 5. главные проверки года
-  h += '<section class="sp"><div class="kick">ПРОВЕРКИ ✦</div><h2>ГЛАВНЫЕ ПРОВЕРКИ ГОДА</h2><h3>Сатурн в ' + satH + ' доме соляра</h3><p>Главная проверка года проходит через тему ' + HTHEME[satH] + '. Здесь придётся взять ответственность, потерпеть и выстроить порядок. Результат будет медленным, но прочным</p></section>';
+  h += '<section class="sp"><div class="kick">ПРОВЕРКИ ✦</div><h2>ГЛАВНЫЕ ПРОВЕРКИ ГОДА</h2><h3>Сатурн в ' + satH + ' доме соляра</h3>' + OKS('Saturn', satH) + '</section>';
   // 6. компенсаторика Оксаны по планетам в домах соляра
   h += '<section class="sp"><div class="kick">ЧТО ДЕЛАТЬ ✦</div><h2>ГЛАВНАЯ АСТРОЛОГИЧЕСКАЯ КОМПЕНСАТОРИКА НА ГОД</h2><p>Эти действия стоит постепенно встроить в свой образ жизни и возвращаться к ним в течение года. Компенсаторика смягчает напряжённые проявления планет через осознанные действия. Это не гарантия отсутствия сложностей, но регулярные действия помогают нивелировать многие негативные события</p>';
   var n = 0;
