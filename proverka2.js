@@ -18,8 +18,11 @@ function card(ps, lib) {
     '<h5>Рекомендации:</h5><ul>' + L.rec.map(function (t) { return '<li>' + esc(t) + '</li>'; }).join('') + '</ul></div>';
 }
 render = function (r, label) {
-  var h = '<div class="meta">' + label + '</div>';
-  h += '<section class="sp"><div class="kick">ВАШ ГОД ✦</div><h2>КАК ИСПОЛЬЗОВАТЬ СОЛЯР, ЧТОБЫ ОН ПОМОГАЛ В ЖИЗНИ</h2>' + SOLAR.intro.map(function (t) { return '<p>' + esc(t) + '</p>'; }).join('') +
+  var Q = new URLSearchParams(location.search), SP = Q.get('sp') || 'all', NM = Q.get('name') || '';
+  if (Q.get('pdf')) document.body.classList.add('pdf');
+  var h = '<div class="cover"><div class="kick">ПЕРСОНАЛЬНЫЙ ПРОГНОЗ ✦</div><div class="cn">' + (NM ? NM.toUpperCase() : '') + '</div><div class="ct">' + (SP === 'all' ? 'Ваш 2027 год: все сферы' : LIBS[SP].title + ' в 2027') + '</div><div class="meta">' + label.split(' · дома')[0] + '</div><div class="pillc">Оксана Смирнова · астролог</div></div>';
+  if (SP !== 'all') r.out = r.out.filter(function (o) { return o.s.id === SP; });
+  if (SP === 'all') h += '<section class="sp"><div class="kick">ВАШ ГОД ✦</div><h2>КАК ИСПОЛЬЗОВАТЬ СОЛЯР, ЧТОБЫ ОН ПОМОГАЛ В ЖИЗНИ</h2>' + SOLAR.intro.map(function (t) { return '<p>' + esc(t) + '</p>'; }).join('') +
     '<h3>Как запустить соляр: 12 дней (по желанию)</h3><p>Считайте от своего дня рождения: день рождения это день 1, следующий день это день 2 и так далее</p>' +
     SOLAR.days.map(function (d) { return '<details class="day"><summary><b>День ' + d[0] + '</b> · ' + d[1] + '</summary><p>' + esc(d[2]) + '</p></details>'; }).join('') + '</section>';
   r.out.forEach(function (o) {
