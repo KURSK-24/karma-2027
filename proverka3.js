@@ -35,12 +35,13 @@ render = function (r, label) {
     '<h3>Солнце соляра в ' + sunH + ' доме</h3><p>В Вашем случае на первый план выходит тема ' + HTHEME[sunH] + '. Здесь будет больше всего событий, решений и перемен</p>' + '</section>';
   // 4. сферы: выжимка из соляра + ответы на вопросы
   h += '<section class="sp"><div class="kick">ПО СФЕРАМ ✦</div><h2>ЧТО СОЛЯР ПОКАЗЫВАЕТ ПО КАЖДОЙ СФЕРЕ</h2>';
-  r.out.forEach(function (o) {
+  var EMO = {money: '💰', work: '💼', love: '❤️', home: '🏡', kids: '🧸', health: '🌿', travel: '✈️'};
+  r.out.forEach(function (o, oi) {
     var inS = PL10.filter(function (b) { return o.s.h.indexOf(S.H(S.P[b])) >= 0; });
-    h += '<h3>' + o.s.t + '</h3>';
+    h += '<div class="sf ' + (oi % 2 ? 'sf-dark' : 'sf-light') + '"><div class="sfh">' + EMO[o.s.id] + ' ' + o.s.t.toUpperCase() + '</div>';
     if (inS.length) h += inS.map(function (b) { var hh = S.H(S.P[b]); return '<p><b>' + PN_R[b] + ' в ' + hh + ' доме соляра</b> (' + HTHEME[hh] + '): ' + PMEAN[b] + '</p>'; }).join('');
     else h += '<p>Планет соляра в этой сфере нет. Сфера в 2027 спокойная, без главных событий года, а её оттенки покажут периоды ниже</p>';
-    h += ANS[o.s.id](o.per).map(function (q) { return '<p class="q">«' + q[0] + '»</p><p>' + esc(q[1]) + '</p>'; }).join('');
+    h += ANS[o.s.id](o.per).map(function (q) { return '<p class="q">💬 «' + q[0] + '»</p><p>' + esc(q[1]) + '</p>'; }).join('') + '</div>';
   });
   h += '</section>';
   // 5. главные проверки года
@@ -59,7 +60,7 @@ render = function (r, label) {
   all.sort(function (x, y) { return x.p.t - y.p.t; });
   [['ok', 'САМЫЕ БЛАГОПРИЯТНЫЕ ПЕРИОДЫ ГОДА'], ['du', 'ДУАЛЬНЫЕ ПЕРИОДЫ ГОДА'], ['bad', 'САМЫЕ НАПРЯЖЁННЫЕ ПЕРИОДЫ ГОДА']].forEach(function (x) {
     var ps = all.filter(function (e) { return e.p.tone === x[0]; });
-    if (ps.length) h += '<section class="sp"><div class="kick">ПЕРИОДЫ ✦</div><h2>' + x[1] + '</h2>' + ps.map(function (e, i) { return card([e.p], e.lib).replace('<h4>', '<h4>' + (i + 1) + '. '); }).join('') + '</section>';
+    if (ps.length) h += '<section class="sp"><div class="kick">ПЕРИОДЫ ✦</div><h2>' + x[1] + '</h2>' + ps.map(function (e, i) { return '<div class="sf ' + (i % 2 ? 'sf-dark' : 'sf-light') + '">' + card([e.p], e.lib).replace('<h4>', '<h4>' + (i + 1) + '. ') + '</div>'; }).join('') + '</section>';
   });
   h += '<div class="quote">Как все сферы связаны между собой именно у Вас, я разбираю лично в персональном прогнозе на 2027 год</div>';
   document.getElementById('res').innerHTML = h;
