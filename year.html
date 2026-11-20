@@ -442,5 +442,7 @@ function g(n){ try{ if(window.ym && window.YM_ID){ ym(window.YM_ID,'reachGoal',n
 })();
 </script>
 <script>document.querySelectorAll('.sph-btn').forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-sp');window.__sphere=v;try{window.__setTg&&window.__setTg()}catch(e){}var f=document.getElementById('oneFor');if(f)f.innerHTML='Ваша сфера: <b>'+v+'</b>';var o=document.querySelector('#tariff-one a[data-tg="year_one"]');if(o)o.textContent='Узнать свой 2027: '+v+' · 450 ₽';try{if(window.ym&&window.YM_ID)ym(window.YM_ID,'reachGoal','year_jump')}catch(e){}})})</script>
+<script>(function(){var v=new URLSearchParams(location.search).get('sp');if(!v)return;var b=document.querySelector('.sph-btn[data-sp="'+v+'"]');if(b){setTimeout(function(){b.click();var t=document.getElementById('tariff-one');if(t)t.scrollIntoView({block:'start'})},50)}})();</script>
+
 </body>
 </html>

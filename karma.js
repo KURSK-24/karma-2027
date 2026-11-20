@@ -789,7 +789,7 @@
       (th === 'money' ? 'Ваша задача связана с деньгами, поэтому начните с «Моего денежного года»: будет ли рост дохода, откуда придут деньги и можно ли брать кредит. А что 2027 готовит работе, отношениям и здоровью, покажет прогноз на год' :
         'Получите свой прогноз на 2027 и узнайте, что год готовит вашей работе, деньгам, отношениям и здоровью. А если для вас сейчас важнее всего деньги, карьера, повышение и статус, сразу переходите в «Мой денежный год»') + '</p>';
     var bY = '<a class="btn" href="year.html" onclick="return window.__g(\'year\')">Прогноз на 2027 по всем сферам</a>', bM = '<a class="btn" href="money.html" onclick="return window.__g(\'money\')">Мой денежный год 2027</a>';
-    var b1 = '<a class="btn ghost" href="year.html#tariff-one" onclick="return window.__g(\'year\')">Узнать одну сферу · 450 ₽</a>';
+    var b1 = '<a class="btn ghost" href="year.html#tariff-one" onclick="return window.__g(\'year\')">Узнать одну сферу</a>';
     out.task += stepWrap(3, s3 + '<div class="paid">' + (th === 'money' ? bM + bY : bY + bM) + b1 + '</div>');
 
     // тройки времён
