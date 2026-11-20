@@ -175,7 +175,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
 .tar-data b{color:var(--txt)}
 .tar .order-note{font-size:14px;text-align:left;line-height:1.5;padding:12px;border-radius:12px;background:var(--cream);color:var(--txt);margin-top:12px}
 .order-note b{display:block;color:var(--wine);margin-bottom:4px}
-.btn:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
+.btn{text-wrap:balance}.back-sph{display:block;text-align:center;margin:14px 0 2px;padding:12px;border:1.5px solid var(--wine);border-radius:14px;color:var(--wine);font-weight:700;text-decoration:none;background:#fff}.btn:focus-visible{outline:3px solid var(--gold);outline-offset:4px}
 @media(max-width:359px){.tar{padding:16px}.tar h3{font-size:19px}.tar-personal .tar-head{margin:-16px -16px 16px;padding:20px 16px}.tar .btn{padding:14px 10px;font-size:15px}}
 .hero h1{font-size:24px;line-height:1.2;margin:14px 0 16px;text-transform:none;font-weight:800}
 .offer{background:#fff;border:1.5px solid var(--wine);border-radius:20px;padding:16px 16px 14px;text-align:left;box-shadow:0 12px 40px rgba(125,29,51,.12)}
@@ -236,7 +236,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
     <figure><img src="img/otzyv-7.jpg" width="878" height="1174" alt="Отзыв коллеги-астролога после голосового разбора" loading="lazy"><figcaption>Отзыв коллеги-астролога: «каждому астрологу свой астролог»</figcaption></figure>
   </section>
 
-  <style>.qs{margin:18px 0 6px}.qs h2{text-align:center}.qs .q{list-style:none;padding:0;margin:12px 0}.qs .q li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 14px;margin:0 0 8px;font-weight:600;line-height:1.4}.qs .q li:before{content:"💬 ";}.qs .ans{text-align:center;font-weight:800;color:var(--wine);margin:6px 0 0}.cross{margin:18px 0 6px;text-align:center}.cross p{margin:0 0 8px;font-weight:700}.sq{margin:0 0 10px}.sq p{background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px;margin:0 0 6px;font-weight:600;font-size:15px;line-height:1.35}</style><h2 style="text-align:center;margin-top:26px">С какими вопросами ко мне обращаются</h2><p style="text-align:center;margin:0 0 12px">По каждой сфере свои. Узнаёте свой?</p>
+  <style>.qs{margin:18px 0 6px}.qs h2{text-align:center}.qs .q{list-style:none;padding:0;margin:12px 0}.qs .q li{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px 14px;margin:0 0 8px;font-weight:600;line-height:1.4}.qs .q li:before{content:"💬 ";}.qs .ans{text-align:center;font-weight:800;color:var(--wine);margin:6px 0 0}.cross{margin:18px 0 6px;text-align:center}.cross p{margin:0 0 8px;font-weight:700}.sq{margin:0 0 10px}.sq p{background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px;margin:0 0 6px;font-weight:600;font-size:15px;line-height:1.35}</style><h2 id="voprosy" style="text-align:center;margin-top:26px;scroll-margin-top:16px">С какими вопросами ко мне обращаются</h2><p style="text-align:center;margin:0 0 12px">По каждой сфере свои. Узнаёте свой?</p>
 
   <section class="sph" id="money"><img src="img/sfera-dengi.jpg" alt=""><div class="in"><div class="tg">Деньги</div><div class="sq"><p>💬 «Хватит ли мне денег, справлюсь ли с расходами?»</p><p>💬 «Будет ли рост дохода или этот год про то, чтобы сохранить?»</p><p>💬 «Откуда могут прийти деньги и где искать дополнительный заработок?»</p><p>💬 «Можно ли мне в этом году брать кредит и делать крупные покупки?»</p></div><a class="btn sph-btn" href="#tarify" data-sp="Деньги">Узнать про деньги ↓</a></div></section>
 
@@ -308,8 +308,9 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
     <p class="tar-limit"><b>В PDF входит только одна сфера.</b> Остальные сферы, голосовой разбор Оксаны и обратная связь не включены</p>
     <p class="hl">Файл по моей методике, по вашей карте. <b>PDF-файл придёт в течение 24 часов</b> после оплаты</p>
     <p class="tar-data"><b>Нужны дата, точное время и место рождения</b></p>
-    <a class="btn ghost" href="https://t.me/okssmi" target="_blank" rel="noopener" data-tg="year_one" onclick="g('buy_sphere')">Узнать свой 2027 · 450 ₽</a>
+    <a class="btn" href="https://t.me/okssmi" target="_blank" rel="noopener" data-tg="year_one" onclick="g('buy_sphere')">Узнать свой 2027 · 450 ₽</a>
     <p class="tg-note order-note"><b>Как заказать</b>Нажмите кнопку, и откроется чат с Оксаной с готовым сообщением. Впишите сферу, которую хотите разобрать больше всего, и нажмите «Отправить» в Telegram</p>
+  <a class="back-sph" href="#voprosy" onclick="g('back_sphere')">← Выбрать другую сферу</a>
   </section>
 
   <section class="tar tar-all" id="tariff-all" aria-labelledby="all-title">
@@ -347,7 +348,7 @@ blockquote{margin:10px 0 12px;padding:12px 14px;background:var(--cream);border-l
       <li>нужны дата, точное время и место рождения, без точного времени прогноз не делаю</li>
     </ul>
     <p class="hl"><b>Мой голосовой разбор 40-60 минут:</b> связываю сферы между собой и объясняю, что делать в вашей ситуации. PDF на весь год тоже входит</p>
-    <a class="btn" href="https://t.me/okssmi" target="_blank" data-tg="year_full" onclick="g('buy_year')">Хочу прогноз на весь 2027 год · 7 990 ₽</a>
+    <a class="btn" href="https://t.me/okssmi" target="_blank" data-tg="year_full" onclick="g('buy_year')">Хочу персональный прогноз на 2027</a>
     <p class="upsell">Хотите ещё и разбор своего денежного потенциала по натальной карте на всю жизнь? Это <a href="money.html">«Мой денежный год 2027»</a>, в нём уже есть этот полный прогноз</p>
   </section>
 
@@ -435,7 +436,7 @@ function g(n){ try{ if(window.ym && window.YM_ID){ ym(window.YM_ID,'reachGoal',n
   if (b) b.addEventListener('click', function(){ go(P + '_jump'); });
 })();
 </script>
-<script>document.querySelectorAll('.sph-btn').forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-sp');window.__sphere=v;try{window.__setTg&&window.__setTg()}catch(e){}var f=document.getElementById('oneFor');if(f)f.innerHTML='Ваша сфера: <b>'+v+'</b>';var o=document.querySelector('#tariff-one a[data-tg="year_one"]');if(o)o.textContent='Узнать свой 2027: '+v+' · 450 ₽';try{if(window.ym&&window.YM_ID)ym(window.YM_ID,'reachGoal','year_jump')}catch(e){}})})</script>
+<script>document.querySelectorAll('.sph-btn').forEach(function(b){b.addEventListener('click',function(){var v=b.getAttribute('data-sp');window.__sphere=v;try{window.__setTg&&window.__setTg()}catch(e){}var f=document.getElementById('oneFor');if(f)f.innerHTML='Ваша сфера: <b>'+v+'</b>';var o=document.querySelector('#tariff-one a[data-tg="year_one"]');if(o)o.textContent='Мой 2027: '+v+' · 450 ₽';try{if(window.ym&&window.YM_ID)ym(window.YM_ID,'reachGoal','year_jump')}catch(e){}})})</script>
 <script>(function(){var v=new URLSearchParams(location.search).get('sp');if(!v)return;var b=document.querySelector('.sph-btn[data-sp="'+v+'"]');if(b){setTimeout(function(){b.click();var t=document.getElementById('tariff-one');if(t)t.scrollIntoView({block:'start'})},50)}})();</script>
 
 <script>
