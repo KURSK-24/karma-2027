@@ -1,19 +1,27 @@
 <!doctype html>
 <html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
 <title>Проверка расчёта 2027</title>
-<style>
-:root{--bg:#fbf7f2;--wine:#7d1d33;--txt:#3a2a2e;--mut:#7a6a6e;--line:rgba(125,29,51,.18)}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.5 system-ui,sans-serif}
-.wrap{max-width:560px;margin:0 auto;padding:16px}
-h1{color:var(--wine);font-size:22px;margin:8px 0}p.lead{color:var(--mut);margin:0 0 14px}
-label{display:block;font-weight:700;margin:10px 0 4px}input{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;font-size:16px;background:#fff}
-button{margin-top:14px;width:100%;padding:14px;border:0;border-radius:14px;background:var(--wine);color:#fff;font-size:17px;font-weight:700}
-#err{color:#b00;margin:8px 0 0}.meta{margin:18px 0 8px;font-weight:700}
-.sp{background:#fff;border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin:12px 0}.sp h2{font-size:18px;color:var(--wine);margin:0 0 8px}.sp h2 small{color:var(--mut);font-weight:400;font-size:13px}
-.pr{border-left:4px solid #999;padding:6px 10px;margin:6px 0;background:#faf8f6;border-radius:8px;font-size:15px}.pr span{color:var(--mut)}
-.pr.ok{border-color:#2e8b57}.pr.bad{border-color:#b0283c}.pr.du{border-color:#c9a063}.none{color:var(--mut)}.qa .q{font-weight:700;margin:12px 0 2px}.qa .a{margin:0 0 6px}.ph{font-size:13px;color:var(--mut);margin:14px 0 4px;border-top:1px dashed var(--line);padding-top:8px}
-details.nat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 12px}details.nat table{width:100%;font-size:14px;border-collapse:collapse}details.nat td{padding:3px 4px;border-bottom:1px solid #eee}
-.rules{font-size:14px;color:var(--mut);background:#fff;border-radius:12px;padding:10px 12px;border:1px dashed var(--line);margin:0 0 12px}
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400&family=Manrope:wght@300;500;700&display=swap" rel="stylesheet"><style>
+:root{--bg:#111E23;--txt:#ECE6DC;--gold:#DDB892;--mut:#9fa6a4;--line:rgba(217,180,143,.35)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:300 16px/1.55 Manrope,system-ui,sans-serif}
+.wrap{max-width:600px;margin:0 auto;padding:16px}
+h1{font-family:"Playfair Display",serif;font-weight:600;color:#F1EADF;font-size:26px;margin:8px 0;text-transform:uppercase}p.lead{color:var(--mut);margin:0 0 14px}
+label{display:block;font-weight:500;margin:10px 0 4px;color:var(--gold)}input{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;font-size:16px;background:#1a2a30;color:var(--txt)}
+button{margin-top:14px;width:100%;padding:14px;border:0;border-radius:24px;background:linear-gradient(90deg,#F2DEC6,#D2AE88);color:#1E2226;font-size:17px;font-weight:700}
+#err{color:#f08a8a;margin:8px 0 0}.meta{margin:18px 0 8px;color:var(--mut)}
+.rules{font-size:13px;color:var(--mut);border:1px dashed var(--line);border-radius:12px;padding:10px 12px;margin:0 0 12px}
+.sp{border-top:1px solid var(--line);margin:26px 0;padding-top:18px}.kick{font-size:11px;letter-spacing:3px;color:#D9D2C6}
+.sp h2{font-family:"Playfair Display",serif;font-weight:600;font-size:28px;line-height:1.1;color:#F1EADF;margin:6px 0 14px}
+.sp h3{font-family:"Playfair Display",serif;font-style:italic;font-weight:400;font-size:24px;color:var(--gold);margin:22px 0 8px}
+.sp h4{font-family:"Playfair Display",serif;font-weight:600;font-size:21px;color:#F1EADF;margin:18px 0 8px;text-transform:uppercase}
+.sp h5{font-family:"Playfair Display",serif;font-style:italic;font-weight:400;font-size:19px;color:var(--gold);margin:12px 0 4px}
+.q{font-family:"Playfair Display",serif;font-style:italic;color:var(--gold);font-size:19px;margin:14px 0 4px}
+.box{border:1px solid var(--line);border-radius:14px;padding:10px;margin:0 0 10px;display:flex;flex-wrap:wrap;gap:6px}
+.pill{background:linear-gradient(90deg,#F1DCC3,#D3B08B);color:#2a1f16;border-radius:16px;padding:4px 12px;font-size:12px;font-weight:700;letter-spacing:1px;text-transform:uppercase}
+.date{border:1px solid var(--line);border-radius:16px;padding:4px 12px;font-weight:700;font-size:14px}
+ul{padding:0;list-style:none}ul li{padding-left:22px;position:relative;margin:0 0 6px}ul li:before{content:"✦";position:absolute;left:2px;color:#F0D8B4}
+ol.komp li{margin:0 0 8px}.quote{background:linear-gradient(90deg,#F1DCC3,#D3B08B);color:#2a1f16;border-radius:16px;padding:16px;margin:18px 0;font-family:"Playfair Display",serif;font-style:italic;font-size:18px}
+.todo{color:var(--mut)}
 </style></head><body><div class="wrap">
 <h1>Проверка расчёта прогноза 2027</h1>
 <p class="lead">Рабочая страница для Оксаны. Вбейте любую дату: сверху ответы на вопросы клиенток по каждой сфере (черновик, ждёт ваших правок), под ними периоды, на которых они основаны. Периоды можно сверить со своей программой</p>
@@ -28,4 +36,6 @@ details.nat{background:#fff;border:1px solid var(--line);border-radius:12px;padd
 <script src="proverka-core.js"></script>
 <script src="proverka-answers.js"></script>
 <script src="proverka.js"></script>
+<script src="proverka-lib.js"></script>
+<script src="proverka2.js"></script>
 </body></html>
