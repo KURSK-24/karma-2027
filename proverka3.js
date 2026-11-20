@@ -44,7 +44,7 @@ render = function (r, label) {
     h += '<div class="sf ' + (oi % 2 ? 'sf-dark' : 'sf-light') + '"><div class="sfh">' + EMO[o.s.id] + ' ' + o.s.t.toUpperCase() + '</div>';
     if (inS.length) h += inS.map(function (b) { var hh = S.H(S.P[b]); var x = (PL_SOL[b] || {})[hh], t = x ? (x.p.filter(function (q) { return /^Очень часто/.test(q); })[0] || x.p[0]) : ''; return '<p><b>' + PN_R[b] + ' в ' + hh + ' доме соляра.</b> ' + esc(t) + '</p>'; }).join('');
     else h += '<p>Планет соляра в этой сфере нет. Сфера в 2027 спокойная, без главных событий года, а её оттенки покажут периоды ниже</p>';
-    h += ANS[o.s.id](o.per).map(function (q) { return '<p class="q">💬 «' + q[0] + '»</p><p>' + esc(q[1]) + '</p>'; }).join('') + '</div>';
+    h += '<p class="qh">ВОПРОСЫ, КОТОРЫЕ МОГУТ ВАС ВОЛНОВАТЬ</p><p class="lead2">Выберите самый близкий вам</p>' + ANS[o.s.id](o.per).map(function (q) { return '<p class="q">💬 «' + q[0] + '»</p><p>' + esc(q[1]) + '</p>'; }).join('') + '</div>';
   });
   h += '</section>';
   // 5. главные проверки года

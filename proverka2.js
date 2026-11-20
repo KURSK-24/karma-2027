@@ -28,7 +28,7 @@ render = function (r, label) {
   r.out.forEach(function (o) {
     var lib = LIBS[o.s.id];
     h += '<section class="sp"><div class="kick">ПРОГНОЗ ПО СФЕРЕ ✦</div><h2>' + o.s.t.toUpperCase() + ' В 2027 ГОДУ</h2>';
-    h += '<h3>Ответы на ваши вопросы</h3><p class="lead2">Почему так, вы увидите ниже: в периодах года ↓</p>' + ANS[o.s.id](o.per).map(function (q) { return '<p class="q">«' + q[0] + '»</p><p>' + esc(q[1]) + '</p>'; }).join('');
+    h += '<h3>Вопросы, которые могут вас волновать</h3><p class="lead2">Выберите самый близкий вам. Почему так, вы увидите ниже: в периодах года ↓</p>' + ANS[o.s.id](o.per).map(function (q) { return '<p class="q">«' + q[0] + '»</p><p>' + esc(q[1]) + '</p>'; }).join('');
     h += '<h3>Что год приносит в этой сфере</h3>' + lib.over.map(function (t) { return '<p>' + esc(t) + '</p>'; }).join('');
     [['ok', 'Благоприятные периоды'], ['du', 'Дуальные периоды: и шанс, и проверка'], ['bad', 'Напряжённые периоды']].forEach(function (x) {
       var ps = o.per.filter(function (p) { return p.tone === x[0]; });
